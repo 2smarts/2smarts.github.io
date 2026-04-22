@@ -1,1 +1,1 @@
-# 2smartspvtlimited.github.io
+# 2smarts.github.io
