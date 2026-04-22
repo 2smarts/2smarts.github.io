@@ -3,37 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2SMARTS PVT LTD | HK</title>
-    <link rel="stylesheet" href="style.css">
+    <title>2SMARTS PVT LIMITED | Hong Kong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0a192f; /* Deep Navy Blue */
+            --accent-color: #c5a059;  /* Luxury Gold */
+            --text-light: #ffffff;
+            --text-gray: #ccd6f6;
+            --bg-light: #f4f7f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body { background-color: var(--bg-light); color: var(--primary-color); line-height: 1.6; padding-bottom: 100px; }
+
+        /* Floating Navigator Menu */
+        .nav-menu {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent-color); }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .company-name {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .address-box {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px; /* Overlap header for modern look */
+            padding: 40px 30px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            font-size: 1.6rem;
+        }
+
+        /* Action/App Portal Button */
+        .portal-btn {
+            display: block;
+            background: var(--primary-color);
+            color: var(--accent-color);
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .portal-btn:hover {
+            background: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-color);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .market-flow {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        ul { list-style: none; margin-top: 10px; }
+        ul li::before { content: "✓"; color: var(--accent-color); margin-right: 10px; font-weight: bold; }
+
+        /* Fixed WhatsApp CTA */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        footer { text-align: center; padding: 60px 20px; font-size: 0.8rem; color: #888; }
+    </style>
 </head>
 <body>
 
+<nav class="nav-menu">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#business" class="nav-link">Business</a>
+    <a href="#portal" class="nav-link">Portal</a>
+    <a href="mailto:2smartspvtltd@gmail.com" class="nav-link">Contact</a>
+</nav>
+
 <header>
-    <h1>2SMARTS PVT LTD</h1>
-    <p>Global Sourcing & Trading House</p>
+    <div class="company-name">2SMARTS PVT LIMITED</div>
+    <div class="address-box">
+        <i class="fas fa-map-marker-alt" style="color:var(--accent-color)"></i> Flat C 11/F Hang Wan Building, Granville Road, Hong Kong
+    </div>
 </header>
 
-<div style="padding: 20px;">
-    <div class="model-card">
-        <h3><i class="fas fa-ship"></i> Logistics & Trading</h3>
-        <p>Managed services for USA, Japan & Hong Kong.</p>
+<div class="container">
+    
+    <a href="app/index.html" id="portal" class="portal-btn">
+        <i class="fas fa-external-link-alt"></i> OPEN TRADING PORTAL
+    </a>
+
+    <div id="business">
+        <h2 class="section-title">Core Business Operations</h2>
+        <p>Expert trading in <strong>New & Used Mobile Devices</strong> and high-demand <strong>Electronics Stock Lots</strong> across HK, USA, and Japan.</p>
     </div>
 
-    <div class="model-card" style="border: 1px solid var(--primary);">
-        <h3><i class="fas fa-laptop-code"></i> Trading Portal</h3>
-        <p>Access our internal trading tools.</p>
-        <a href="app/index.html" style="color: var(--primary); font-weight: bold;">Launch App →</a>
+    <div class="market-flow">
+        <h2 style="color: var(--accent-color);">Global Market Flow</h2>
+        <div class="grid">
+            <div>
+                <h3><i class="fas fa-plane-departure"></i> Suppliers</h3>
+                <ul>
+                    <li>Hong Kong & USA</li>
+                    <li>Japan (Expansion)</li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fas fa-plane-arrival"></i> Key Markets</h3>
+                <ul>
+                    <li>UAE & USA</li>
+                    <li>Domestic Hong Kong</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="address-box">
-        <h4>REGISTERED ADDRESS (HK)</h4>
-        <p>Flat C 11/F Hang Wan Building, Granville Road, Tsim Sha Tsui, Kowloon, Hong Kong.</p>
+    <h2 class="section-title">Revenue Models</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Direct Trading</h3>
+            <p>End-to-end buying and selling of premium electronics globally.</p>
+        </div>
+        <div class="card">
+            <h3>Managed Services</h3>
+            <p>Your local agent in HK for supplier coordination and pickups.</p>
+        </div>
+        <div class="card">
+            <h3>Logistics Margin</h3>
+            <p>Volume-based freight consolidation and logistics management.</p>
+        </div>
     </div>
 </div>
 
-<a href="https://wa.me/85260257569" class="fixed-cta" target="_blank">
-    <i class="fab fa-whatsapp"></i> CONTACT US
+<footer>
+    &copy; 2026 2SMARTS PVT LIMITED HONGKONG. Registered in SAR Hong Kong.
+</footer>
+
+<a href="https://wa.me/85260257569" class="whatsapp-fixed" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
