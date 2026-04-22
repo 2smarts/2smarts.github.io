@@ -1,49 +1,130 @@
+Bilkul! Mobile ke liye website aisi honi chahiye jo ek dum saaf (clean) dikhe aur buttons bade hon taake thumb se asani se click ho sakein.
+
+Maine ye naya design "Mobile-First" banaya hai. Isme ek professional dark blue theme hai, shadow effects hain, aur niche ek permanent WhatsApp floating button bhi daal diya hai jo mobile screen par niche hi rahega.
+
+Ye naya Professional Code copy karein:
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2SMART PRIVATE LIMITED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; text-align: center; }
-        header { background-color: #1a73e8; color: white; padding: 40px 20px; }
-        .container { padding: 40px; }
-        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: inline-block; max-width: 500px; }
-        h1 { margin: 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
-        h2 { text-transform: uppercase; color: #1a73e8; margin-top: 0; }
-        p { color: #555; font-size: 1.1em; line-height: 1.6; text-transform: uppercase; }
-        .contact-btn { display: inline-block; background-color: #25D366; color: white; padding: 15px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; text-transform: uppercase; }
-        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; padding: 0; 
+            background: #f8f9fa; 
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Mobile Header */
+        header { 
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { 
+            margin: 0; font-size: 1.8em; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .tagline { 
+            font-size: 0.9em; opacity: 0.9; 
+            text-transform: uppercase; margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .container { padding: 20px; margin-top: -30px; }
+
+        /* Card Design */
+        .card { 
+            background: white; 
+            padding: 30px 20px; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            max-width: 100%;
+            text-align: center;
+        }
+
+        h2 { 
+            color: #0d47a1; 
+            font-size: 1.4em; 
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        p { font-size: 1em; color: #666; text-transform: uppercase; }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        /* Floating WhatsApp Button for Mobile */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
+        
+        .footer-text { font-size: 12px; color: #aaa; margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>2SMART PRIVATE LIMITED</h1>
-    <p>WE BUILD DIGITAL SOLUTIONS FOR YOUR BUSINESS</p>
+    <div class="tagline">Digital Excellence & Business Solutions</div>
 </header>
 
 <div class="container">
     <div class="card">
         <h2>WELCOME TO OUR OFFICIAL SITE</h2>
         <p>AAPKI COMPANY AB ONLINE HAI! HUM YAHAN BEHTAREEN SERVICES PROVIDE KARTE HAIN.</p>
+        
+        <div class="info-box">
+            <strong>OUR LOCATION:</strong><br>
+            KARACHI, PAKISTAN
+        </div>
+
+        <p>WE ARE READY TO SERVE YOU 24/7</p>
+        
         <hr>
-        <p><strong>CONTACT US:</strong><br>KARACHI, PAKISTAN</p>
-        <a href="#" class="contact-btn">Chat on WhatsApp</a>
+        <div class="footer-text">© 2026 2SMART PRIVATE LIMITED. ALL RIGHTS RESERVED.</div>
     </div>
 </div>
 
+<a href="https://wa.me/923000000000" class="whatsapp-float">
+    <span>CHAT ON WHATSAPP</span>
+</a>
+
 </body>
 </html>
-Paste karne ka sahi tariqa:
-GitHub mein index.html khol kar Edit (pencil icon) par click karein.
-
-Pehle se likha hua sab kuch select karke Delete kar dein (taake screen bilkul khali ho jaye).
-
-Ye upar wala poora code wahan Paste kar dein.
-
-Niche ja kar "Commit changes..." wale green button par click karein.
-
-Jab aap save kar lein, toh 2 minute baad apne mobile par apni website (2smartpvtlited.github.io) ko Refresh karke dekhiye. Sab Capital mein aur professional dikhega!
-
-Kya aapne save kar liya?
