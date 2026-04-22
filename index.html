@@ -3,124 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2SMARTS PRIVATE LIMITED</title>
+    <title>2SMARTS PVT LTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Apple Style: Clean, White, and Bold */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; }
         
-        body { background-color: #ffffff; color: #1d1d1f; line-height: 1.5; }
+        body { background-color: #fbfbfd; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
 
-        /* Minimal Header */
+        /* Apple Style Nav Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            height: 48px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        nav span { font-weight: 600; font-size: 14px; letter-spacing: 0.5px; color: #000; }
+
+        /* Hero Section */
         header {
-            padding: 80px 20px 40px;
+            padding: 120px 20px 60px;
             text-align: center;
-            background: #f5f5f7; /* Apple's signature light gray */
+            background: #ffffff;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -2px;
+            background: linear-gradient(180deg, #1d1d1f 0%, #434343 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #86868b;
-            font-weight: 400;
+            font-weight: 500;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
-        .container {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+        /* Glass Cards Container */
+        .container { padding: 20px; max-width: 600px; margin: auto; }
 
-        /* Large Clean Sections */
-        .section-card {
-            margin-bottom: 60px;
+        .pro-card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f0f0f2;
             text-align: center;
         }
 
-        .section-card h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
+        .pro-card:active { transform: scale(0.97); }
 
-        .section-card p {
-            font-size: 1.2rem;
-            color: #515154;
-            max-width: 500px;
-            margin: 0 auto 20px;
-        }
-
-        /* Blue Link Button Style */
-        .apple-link {
+        .pro-card i {
+            font-size: 2.5rem;
             color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .pro-card h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .pro-card p {
+            font-size: 1.1rem;
+            color: #515154;
+            margin-bottom: 20px;
+        }
+
+        /* Apple's Iconic Blue Link */
+        .apple-link {
+            color: #06c;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .apple-link:hover { text-decoration: underline; }
-
-        /* Center Button */
-        .cta-button {
-            display: inline-block;
-            background-color: #0071e3;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 980px; /* Fully rounded like Apple */
+        /* Action Button */
+        .buy-btn {
+            background: #0071e3;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 980px;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-top: 20px;
-            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 17px;
+            display: inline-block;
+            margin-top: 10px;
         }
-
-        .cta-button:hover { background-color: #0077ed; opacity: 0.9; }
 
         footer {
-            padding: 40px 20px;
-            background: #f5f5f7;
+            padding: 60px 20px;
             text-align: center;
-            font-size: 0.8rem;
             color: #86868b;
-            border-top: 1px solid #d2d2d7;
+            font-size: 0.75rem;
+            background: #f5f5f7;
         }
 
-        /* Mobile specific adjustments */
         @media (max-width: 600px) {
-            header h1 { font-size: 2.2rem; }
-            header p { font-size: 1.1rem; }
-            .section-card h2 { font-size: 1.8rem; }
+            header h1 { font-size: 2.8rem; }
+            .pro-card h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
+<nav>
+    <span>2SMARTS PRIVATE LIMITED</span>
+</nav>
+
 <header>
     <h1>2SMARTS</h1>
-    <p>PVT LTD.</p>
+    <p>Innovate. Design. Scale.</p>
 </header>
 
 <div class="container">
-    <div class="section-card">
-        <h2>Digital Solutions.</h2>
-        <p>Innovation that moves your business forward.</p>
-        <a href="#" class="apple-link">Learn more ></a>
+    <div class="pro-card">
+        <i class="fab fa-apple"></i>
+        <h2>Smart Design.</h2>
+        <p>Premium user interfaces built for the future of mobile.</p>
+        <a href="#" class="apple-link">Learn more <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
     </div>
 
-    <div class="section-card">
-        <h2>Built for Karachi.</h2>
-        <p>Premium services designed for the modern era.</p>
-        <a href="https://wa.me/923XXXXXXXXX" class="cta-button">Contact on WhatsApp</a>
+    <div class="pro-card" style="background: #000; color: #fff; border: none;">
+        <i class="fas fa-bolt" style="color: #fff;"></i>
+        <h2 style="color: #fff;">Supercharged.</h2>
+        <p style="color: #a1a1a6;">Fast, secure, and reliable digital solutions for Karachi.</p>
+        <a href="https://wa.me/923XXXXXXXXX" class="buy-btn">Contact Us</a>
     </div>
 </div>
 
 <footer>
-    <p>© 2026 2SMARTS PRIVATE LIMITED. KARACHI, PAKISTAN.</p>
+    <p>Copyright © 2026 2SMARTS PVT LTD. All rights reserved.</p>
 </footer>
 
 </body>
