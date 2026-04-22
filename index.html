@@ -3,159 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2SMARTS PVT LTD | Digital Future</title>
+    <title>2SMARTS PVT LTD | Marketing & Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #007aff; /* Apple Blue */
-            --samsung-blue: #2167ff; 
-            --dark: #000000;
-            --glass: rgba(255, 255, 255, 0.05);
+            --accent: #2167ff; /* Samsung Blue */
+            --bg: #000000;
+            --surface: #121212;
+            --text-main: #ffffff;
+            --text-dim: #a1a1a6;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'SF Pro Display', 'Samsung One', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, system-ui, sans-serif; }
         
-        body { background-color: #000; color: #fff; line-height: 1.6; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
 
-        /* Premium Dark Header */
+        /* Animated Marketing Header */
         header {
-            height: 100vh;
+            height: 90vh;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: radial-gradient(circle at center, #111 0%, #000 100%);
-            padding: 20px;
+            background: radial-gradient(circle at 50% 10%, #1a1a1a 0%, #000 70%);
         }
 
-        .hero-title {
-            font-size: 4rem;
-            font-weight: 800;
-            background: linear-gradient(to bottom, #fff 40%, #666 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -2px;
-            margin-bottom: 10px;
-        }
-
-        .badge {
-            background: var(--samsung-blue);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
+        .promo-badge {
+            background: linear-gradient(90deg, #2167ff, #00d4ff);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
             margin-bottom: 20px;
             text-transform: uppercase;
         }
 
-        /* Glassmorphism Cards */
-        .content-section {
-            padding: 60px 20px;
-            background: #050505;
-        }
-
-        .grid {
-            display: grid;
-            gap: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .glass-card {
-            background: var(--glass);
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 30px;
-            transition: 0.4s;
-        }
-
-        .glass-card:hover {
-            border-color: var(--primary);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .glass-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
+        header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
             margin-bottom: 15px;
+            background: linear-gradient(to bottom, #fff 50%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .glass-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .glass-card p { color: #888; font-size: 0.95rem; }
-
-        /* Professional Footer */
-        footer {
-            padding: 60px 20px;
-            text-align: center;
-            border-top: 1px solid #111;
-            color: #444;
-            font-size: 0.8rem;
-        }
-
-        /* Fixed CTA Button */
-        .cta-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 20px;
-            left: 20px;
-            background: #fff;
-            color: #000;
-            text-align: center;
-            padding: 18px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 700;
+        header p {
             font-size: 1.1rem;
-            z-index: 1000;
-            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+            color: var(--text-dim);
+            max-width: 300px;
+        }
+
+        /* Marketing Stats/Trust Badges */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: var(--surface);
+            margin: -50px 20px 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item h4 { font-size: 1.2rem; color: var(--accent); }
+        .stat-item p { font-size: 0.6rem; text-transform: uppercase; color: var(--text-dim); }
+
+        /* Service Grid (Stylish & Modern) */
+        .container { padding: 0 20px 120px; }
+        .section-h { font-size: 1.8rem; margin-bottom: 25px; font-weight: 700; text-align: center; }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .service-box {
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.03);
             transition: 0.3s;
         }
 
-        .cta-btn:active { transform: scale(0.95); }
+        .service-box i { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+        .service-box h3 { font-size: 1rem; margin-bottom: 5px; }
+        .service-box p { font-size: 0.75rem; color: var(--text-dim); line-height: 1.4; }
 
-        @media (max-width: 600px) {
-            .hero-title { font-size: 3rem; }
+        /* Powerful Marketing Button */
+        .fixed-cta {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            background: #ffffff;
+            color: #000;
+            padding: 20px;
+            border-radius: 22px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.2s;
         }
+
+        .fixed-cta:active { transform: scale(0.96); }
+
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.7rem; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="badge">Next Gen Agency</div>
-    <h1 class="hero-title">2SMARTS</h1>
-    <p style="color: #888; font-size: 1.2rem;">Building the future, one pixel at a time.</p>
+    <div class="promo-badge">Market Leader 2026</div>
+    <h1>2SMARTS<br>PRO.</h1>
+    <p>Premium Digital Marketing & Tech Solutions in Karachi.</p>
 </header>
 
-<section class="content-section">
-    <div class="grid">
-        <div class="glass-card">
-            <i class="fas fa-layer-group"></i>
-            <h3>UI/UX Design</h3>
-            <p>Samsung-style vibrancy meets Apple-style simplicity.</p>
-        </div>
+<div class="stats-bar">
+    <div class="stat-item"><h4>100%</h4><p>Quality</p></div>
+    <div class="stat-item"><h4>24/7</h4><p>Support</p></div>
+    <div class="stat-item"><h4>Fast</h4><p>Delivery</p></div>
+</div>
 
-        <div class="glass-card">
+<div class="container">
+    <h2 class="section-h">Our Expertise.</h2>
+    <div class="service-grid">
+        <div class="service-box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Marketing</h3>
+            <p>Targeted ads for maximum growth.</p>
+        </div>
+        <div class="service-box">
             <i class="fas fa-code"></i>
-            <h3>Development</h3>
-            <p>Fast, secure, and professional code for your business growth.</p>
+            <h3>Web Dev</h3>
+            <p>Clean, fast, & modern sites.</p>
         </div>
-
-        <div class="glass-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Digital Strategy</h3>
-            <p>Innovative marketing solutions based in Karachi, Pakistan.</p>
+        <div class="service-box">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Strategy</h3>
+            <p>Data-driven business plans.</p>
+        </div>
+        <div class="service-box">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>App UI</h3>
+            <p>Samsung/Apple style designs.</p>
         </div>
     </div>
-</section>
+</div>
 
 <footer>
-    <p>ESTABLISHED 2026 | 2SMARTS PRIVATE LIMITED</p>
+    2SMARTS PRIVATE LIMITED | KARACHI, PK
 </footer>
 
-<a href="https://wa.me/923XXXXXXXXX" class="cta-btn">
-    <i class="fab fa-whatsapp"></i> START A PROJECT
+<a href="https://wa.me/923XXXXXXXXX" class="fixed-cta">
+    <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> GET STARTED NOW
 </a>
 
 </body>
