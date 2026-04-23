@@ -232,102 +232,88 @@
     <i class="fab fa-whatsapp"></i>
 </div>
 </a>
-
-   <div class="wechat-container">
-    <img src="wechat-qr.png" alt="WeChat QR Code for Asif Khan" class="wechat-qr">
-    <div class="wechat-button">
-        Contact on WeChat
-    </div>
-</div>
 <style>
-  /* Gol button WhatsApp ke style ka (Left Side) */
+  /* Button Style */
   .wechat-btn-circle {
     position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #07C160;
+    left: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #07C160; /* Original WeChat Green */
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
-    z-index: 10000;
+    z-index: 9999;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
-<style>
-  .wechat-btn-circle {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #07C160;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    cursor: pointer;
-    z-index: 10000;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
   }
-  .wechat-btn-circle svg { width: 32px; height: 32px; fill: white; }
 
+  /* Popup Overlay */
   #qr-overlay {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 10001;
+    background: rgba(255, 255, 255, 0.95); /* Safaid background, dekhne mein sukoon */
+    z-index: 10000;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .qr-container {
+  .qr-card {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     text-align: center;
-    max-width: 300px;
+    border: 1px solid #eee;
   }
 
-  .qr-container img {
-    width: 100%;
+  .qr-card img {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .wechat-id-box {
+    background: #f4f4f4;
+    padding: 12px;
     border-radius: 10px;
-  }
-
-  /* Copy ID / Direct Link Button */
-  .wechat-id-btn {
-    margin-top: 15px;
-    display: block;
-    background: #07C160;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: bold;
     font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+    border: 1px dashed #07C160;
+    margin-bottom: 15px;
   }
 
-  .close-text { color: #ccc; margin-top: 20px; font-family: sans-serif; cursor: pointer; }
+  .close-btn {
+    margin-top: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: none;
+  }
 </style>
 
 <button class="wechat-btn-circle" onclick="document.getElementById('qr-overlay').style.display='flex'">
-  <svg viewBox="0 0 24 24"><path d="M8.354 11.104a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m6.146 0a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m-3.23-5.27c-4.417 0-8 3.036-8 6.779 0 2.09 1.115 3.96 2.87 5.255l-.74 2.213 2.515-1.257c.433.125.882.193 1.343.193.303 0 .602-.03.894-.085-.245-.63-.38-1.313-.38-2.028 0-3.395 3.018-6.148 6.74-6.148.254 0 .504.013.75.04-.633-2.884-3.528-4.962-6.992-4.962m7.13 6.148c-3.132 0-5.67 2.228-5.67 4.975 0 2.748 2.538 4.975 5.67 4.975.327 0 .647-.024.957-.07l1.785.892-.525-1.57c1.246-.918 2.036-2.245 2.036-3.727 0-2.747-2.538-4.975-5.67-4.975"/></svg>
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M8.354 11.104a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m6.146 0a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m-3.23-5.27c-4.417 0-8 3.036-8 6.779 0 2.09 1.115 3.96 2.87 5.255l-.74 2.213 2.515-1.257c.433.125.882.193 1.343.193.303 0 .602-.03.894-.085-.245-.63-.38-1.313-.38-2.028 0-3.395 3.018-6.148 6.74-6.148.254 0 .504.013.75.04-.633-2.884-3.528-4.962-6.992-4.962m7.13 6.148c-3.132 0-5.67 2.228-5.67 4.975 0 2.748 2.538 4.975 5.67 4.975.327 0 .647-.024.957-.07l1.785.892-.525-1.57c1.246-.918 2.036-2.245 2.036-3.727 0-2.747-2.538-4.975-5.67-4.975"/></svg>
 </button>
 
 <div id="qr-overlay">
-  <div class="qr-container">
-    <img src="qr.jpg" alt="WeChat QR">
-    <a href="weixin://dl/chat?ASIF_KHAN_ID" class="wechat-id-btn">Open WeChat App</a>
-    <p style="font-size: 12px; color: #666; margin-top: 5px;">WeChat ID: ASIF_KHAN_ID</p>
+  <div class="qr-card">
+    <h3 style="font-family: sans-serif; margin-bottom: 15px;">Add me on WeChat</h3>
+    <img src="qr.jpg" alt="WeChat QR Code">
+    <div class="wechat-id-box">
+       WeChat ID: ASIF_KHAN_ID
+    </div>
+    <p style="font-size: 13px; color: #666; font-family: sans-serif;">Scan QR or search by ID</p>
+    <button class="close-btn" onclick="document.getElementById('qr-overlay').style.display='none'">Close</button>
   </div>
-  <p class="close-text" onclick="document.getElementById('qr-overlay').style.display='none'">Close [X]</p>
 </div>
 </body>
 </html>
