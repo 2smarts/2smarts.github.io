@@ -251,23 +251,21 @@
   }
   .qr-card img { width: 250px; margin-bottom: 20px; }
 
-  /* Clickable ID Style */
-  .wechat-id-link {
-    display: inline-block;
-    background: #f0fdf4;
-    color: #07C160;
-    padding: 15px 25px;
+  /* Direct Link Button Style */
+  .direct-link-btn {
+    display: block;
+    background: #07C160;
+    color: white;
+    padding: 15px 20px;
     border-radius: 12px;
     font-weight: bold;
     text-decoration: none;
-    border: 2px solid #07C160;
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    width: 100%;
     cursor: pointer;
-    margin-bottom: 10px;
   }
-  .wechat-id-link:active { background: #07C160; color: white; }
-
-  .status-text { font-size: 12px; color: #666; margin-bottom: 15px; }
   .btn-close-ui { background: #333; color: white; border: none; padding: 10px 30px; border-radius: 50px; cursor: pointer; }
 </style>
 
@@ -280,26 +278,14 @@
     <h3 style="margin-bottom: 10px;">Add me on WeChat</h3>
     <img src="qr.jpg" alt="WeChat QR">
     
-    <div class="wechat-id-link" onclick="copyID()">
-      ID: asif555_ID
-    </div>
-    
-    <p class="status-text" id="copy-status">Click ID to copy & search in WeChat</p>
+    <a href="weixin://dl/chat?asif555_ID" class="direct-link-btn">
+      Open WeChat: asif555_ID
+    </a>
+
+    <p style="font-size: 12px; color: #666; margin-bottom: 15px;">Tap to open app directly</p>
     <button class="btn-close-ui" onclick="document.getElementById('wechat-popup').style.display='none'">Close</button>
   </div>
 </div>
-
-<script>
-function copyID() {
-  const id = "asif555";
-  navigator.clipboard.writeText(id).then(() => {
-    const status = document.getElementById('copy-status');
-    status.innerText = "ID Copied! Now paste in WeChat App.";
-    status.style.color = "#07C160";
-    status.style.fontWeight = "bold";
-  });
-}
-</script>
 </body>
 </html>
 
