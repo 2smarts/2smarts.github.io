@@ -234,75 +234,31 @@
 </a>
 <style>
   .wechat-float-btn {
-    position: fixed;
-    left: 25px;
-    bottom: 25px;
-    width: 60px;
-    height: 60px;
-    background-color: #07C160;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    cursor: pointer;
-    z-index: 9999;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed; left: 25px; bottom: 25px;
+    width: 60px; height: 60px; background-color: #07C160;
+    border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    cursor: pointer; z-index: 9999; border: none;
+    display: flex; justify-content: center; align-items: center;
   }
-
   #wechat-popup {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 10000;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: sans-serif;
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.95); z-index: 10000;
+    justify-content: center; align-items: center; flex-direction: column; font-family: sans-serif;
   }
-
   .qr-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    text-align: center;
-    border: 1px solid #eee;
+    background: white; padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; border: 1px solid #eee;
   }
-
-  .qr-card img {
-    width: 250px;
-    margin-bottom: 20px;
+  .qr-card img { width: 250px; margin-bottom: 20px; }
+  
+  /* Link Button Style */
+  .copy-id-btn {
+    display: block; background: #07C160; color: white;
+    padding: 12px; border-radius: 10px; font-weight: bold;
+    text-decoration: none; margin-bottom: 10px; cursor: pointer; border: none; width: 100%;
   }
-
-  /* Isko link wala style de diya hai */
-  .wechat-link-btn {
-    display: block;
-    background: #f4f4f4;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: #07C160; /* Link color */
-    border: 1px dashed #07C160;
-    text-decoration: none; /* Underline khatam */
-    margin-bottom: 15px;
-    transition: 0.3s;
-  }
-
-  .wechat-link-btn:hover {
-    background: #e8f5e9;
-  }
-
-  .btn-close-ui {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+  .id-text { color: #555; font-size: 14px; margin-bottom: 15px; }
+  .btn-close-ui { background: #333; color: white; border: none; padding: 10px 30px; border-radius: 50px; cursor: pointer; }
 </style>
 
 <button class="wechat-float-btn" onclick="document.getElementById('wechat-popup').style.display='flex'">
@@ -312,16 +268,27 @@
 <div id="wechat-popup">
   <div class="qr-card">
     <h3 style="margin-bottom: 15px;">Add me on WeChat</h3>
-    <img src="qr.jpg" alt="WeChat QR Code">
+    <img src="qr.jpg" alt="WeChat QR">
     
-    <a href="weixin://dl/chat?asif555_ID" class="wechat-link-btn">
-       WeChat ID: asif555_ID
-    </a>
-
-    <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Click ID to open app or scan QR</p>
+    <button class="copy-id-btn" onclick="copyAndOpen()">Click to Add: asif555_ID</button>
+    
+    <p class="id-text" id="status-msg">Click ID to copy & open WeChat</p>
     <button class="btn-close-ui" onclick="document.getElementById('wechat-popup').style.display='none'">Close</button>
   </div>
 </div>
+
+<script>
+function copyAndOpen() {
+  var id = "asif555_ID";
+  navigator.clipboard.writeText(id);
+  document.getElementById('status-msg').innerText = "ID Copied! Opening WeChat...";
+  document.getElementById('status-msg').style.color = "#07C160";
+  
+  setTimeout(function() {
+    window.location.href = "weixin://";
+  }, 1000);
+}
+</script>
 </body>
 </html>
 
