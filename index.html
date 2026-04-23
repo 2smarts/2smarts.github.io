@@ -236,37 +236,41 @@
   .wechat-float-btn {
     position: fixed; left: 25px; bottom: 25px;
     width: 60px; height: 60px; background-color: #07C160;
-    border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     cursor: pointer; z-index: 9999; border: none;
     display: flex; justify-content: center; align-items: center;
+    transition: 0.3s ease;
   }
+  .wechat-float-btn:hover { transform: scale(1.1); }
+
   #wechat-popup {
     display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.98); z-index: 10000;
+    background: rgba(0, 0, 0, 0.8); z-index: 10000;
     justify-content: center; align-items: center; flex-direction: column; font-family: sans-serif;
   }
-  .qr-card {
-    background: white; padding: 30px; border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; border: 1px solid #eee;
-  }
-  .qr-card img { width: 250px; margin-bottom: 20px; }
 
-  /* Direct Link Button Style */
-  .direct-link-btn {
-    display: block;
-    background: #07C160;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 16px;
-    margin-bottom: 15px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
+  .qr-card {
+    background: white; padding: 25px; border-radius: 15px;
+    text-align: center; width: 300px; position: relative;
   }
-  .btn-close-ui { background: #333; color: white; border: none; padding: 10px 30px; border-radius: 50px; cursor: pointer; }
+
+  .qr-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+  /* Copy Button Style */
+  .copy-box {
+    background: #f3f3f3; border: 1px dashed #07C160;
+    padding: 12px; border-radius: 8px; cursor: pointer;
+    margin-bottom: 15px; transition: 0.2s;
+  }
+  .copy-box:active { background: #e0e0e0; }
+  
+  .copy-box span { display: block; color: #333; font-weight: bold; font-size: 16px; }
+  .copy-box small { color: #07C160; font-size: 11px; }
+
+  .close-x {
+    position: absolute; top: -40px; right: 0;
+    color: white; font-size: 30px; cursor: pointer;
+  }
 </style>
 
 <button class="wechat-float-btn" onclick="document.getElementById('wechat-popup').style.display='flex'">
@@ -275,17 +279,29 @@
 
 <div id="wechat-popup">
   <div class="qr-card">
-    <h3 style="margin-bottom: 10px;">Add me on WeChat</h3>
+    <span class="close-x" onclick="document.getElementById('wechat-popup').style.display='none'">&times;</span>
+    <h3 style="margin: 0 0 15px 0; color: #333;">Add me on WeChat</h3>
     <img src="qr.jpg" alt="WeChat QR">
     
-    <a href="weixin://dl/chat?asif555" class="direct-link-btn">
-      Open WeChat: asif555_ID
-    </a>
-
-    <p style="font-size: 12px; color: #666; margin-bottom: 15px;">Tap to open app directly</p>
-    <button class="btn-close-ui" onclick="document.getElementById('wechat-popup').style.display='none'">Close</button>
+    <div class="copy-box" onclick="copyWeChatID()">
+      <span id="id-text">asif555_ID</span>
+      <small id="status-text">Tap to copy ID</small>
+    </div>
+    
+    <p style="font-size: 12px; color: #888;">Scan QR or search by ID in WeChat</p>
   </div>
 </div>
+
+<script>
+function copyWeChatID() {
+  const id = "asif555_ID";
+  navigator.clipboard.writeText(id).then(() => {
+    document.getElementById('status-text').innerText = "ID COPIED! Paste in WeChat";
+    document.getElementById('status-text').style.color = "#07C160";
+    document.getElementById('id-text').style.color = "#07C160";
+  });
+}
+</script>
 </body>
 </html>
 
