@@ -233,14 +233,13 @@
 </div>
 </a>
 <style>
-  /* Button Style */
-  .wechat-btn-circle {
+  .wechat-float-btn {
     position: fixed;
     left: 25px;
     bottom: 25px;
-    width: 55px;
-    height: 55px;
-    background-color: #07C160; /* Original WeChat Green */
+    width: 60px;
+    height: 60px;
+    background-color: #07C160;
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
@@ -251,16 +250,16 @@
     align-items: center;
   }
 
-  /* Popup Overlay */
-  #qr-overlay {
+  #wechat-popup {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.95); /* Safaid background, dekhne mein sukoon */
+    background: rgba(255, 255, 255, 0.95);
     z-index: 10000;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: sans-serif;
   }
 
   .qr-card {
@@ -277,42 +276,50 @@
     margin-bottom: 20px;
   }
 
-  .wechat-id-box {
+  /* Isko link wala style de diya hai */
+  .wechat-link-btn {
+    display: block;
     background: #f4f4f4;
     padding: 12px;
     border-radius: 10px;
-    font-family: sans-serif;
     font-weight: bold;
-    color: #333;
+    color: #07C160; /* Link color */
     border: 1px dashed #07C160;
+    text-decoration: none; /* Underline khatam */
     margin-bottom: 15px;
+    transition: 0.3s;
   }
 
-  .close-btn {
-    margin-top: 20px;
+  .wechat-link-btn:hover {
+    background: #e8f5e9;
+  }
+
+  .btn-close-ui {
     background: #333;
     color: white;
-    padding: 10px 25px;
+    border: none;
+    padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    font-family: sans-serif;
-    border: none;
+    font-weight: bold;
   }
 </style>
 
-<button class="wechat-btn-circle" onclick="document.getElementById('qr-overlay').style.display='flex'">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M8.354 11.104a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m6.146 0a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m-3.23-5.27c-4.417 0-8 3.036-8 6.779 0 2.09 1.115 3.96 2.87 5.255l-.74 2.213 2.515-1.257c.433.125.882.193 1.343.193.303 0 .602-.03.894-.085-.245-.63-.38-1.313-.38-2.028 0-3.395 3.018-6.148 6.74-6.148.254 0 .504.013.75.04-.633-2.884-3.528-4.962-6.992-4.962m7.13 6.148c-3.132 0-5.67 2.228-5.67 4.975 0 2.748 2.538 4.975 5.67 4.975.327 0 .647-.024.957-.07l1.785.892-.525-1.57c1.246-.918 2.036-2.245 2.036-3.727 0-2.747-2.538-4.975-5.67-4.975"/></svg>
+<button class="wechat-float-btn" onclick="document.getElementById('wechat-popup').style.display='flex'">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M8.354 11.104a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m6.146 0a.925.925 0 0 1-.917-.917c0-.51.407-.917.917-.917s.917.407.917.917c0 .51-.407.917-.917.917m-3.23-5.27c-4.417 0-8 3.036-8 6.779 0 2.09 1.115 3.96 2.87 5.255l-.74 2.213 2.515-1.257c.433.125.882.193 1.343.193.303 0 .602-.03.894-.085-.245-.63-.38-1.313-.38-2.028 0-3.395 3.018-6.148 6.74-6.148.254 0 .504.013.75.04-.633-2.884-3.528-4.962-6.992-4.962m7.13 6.148c-3.132 0-5.67 2.228-5.67 4.975 0 2.748 2.538 4.975 5.67 4.975.327 0 .647-.024.957-.07l1.785.892-.525-1.57c1.246-.918 2.036-2.245 2.036-3.727 0-2.747-2.538-4.975-5.67-4.975"/></svg>
 </button>
 
-<div id="qr-overlay">
+<div id="wechat-popup">
   <div class="qr-card">
-    <h3 style="font-family: sans-serif; margin-bottom: 15px;">Add me on WeChat</h3>
+    <h3 style="margin-bottom: 15px;">Add me on WeChat</h3>
     <img src="qr.jpg" alt="WeChat QR Code">
-    <div class="wechat-id-box">
-       WeChat ID:asif555_ID
-    </div>
-    <p style="font-size: 13px; color: #666; font-family: sans-serif;">Scan QR or search by ID</p>
-    <button class="close-btn" onclick="document.getElementById('qr-overlay').style.display='none'">Close</button>
+    
+    <a href="weixin://dl/chat?asif555_ID" class="wechat-link-btn">
+       WeChat ID: asif555_ID
+    </a>
+
+    <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Click ID to open app or scan QR</p>
+    <button class="btn-close-ui" onclick="document.getElementById('wechat-popup').style.display='none'">Close</button>
   </div>
 </div>
 </body>
