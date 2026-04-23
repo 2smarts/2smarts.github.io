@@ -316,22 +316,103 @@
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+<style>
+    /* 1. Floating Button Style (Niche wala Green button) */
+    .wechat-float-btn {
+        position: fixed;
+        left: 25px;
+        bottom: 25px;
+        width: 65px;
+        height: 65px;
+        background: linear-gradient(135deg, #07C160, #06ad56); /* WeChat Green */
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(7, 193, 96, 0.4);
+        cursor: pointer;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        border: none;
+    }
+    .wechat-float-btn:hover { 
+        transform: translateY(-5px); 
+        box-shadow: 0 15px 30px rgba(7, 193, 96, 0.5); 
+    }
+    /* Sahi Logo SVG (Screenshot 2 wala) */
+    .wechat-logo-svg {
+        width: 38px;
+        height: 38px;
+        fill: white;
+    }
+
+    /* 2. Popup Window Style */
+    #wechat-popup {
+        display: none; /* Hide by default */
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.85); /* Dark Blur Background */
+        z-index: 100000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* 3. QR Card Design (White Wala) */
+    .qr-card-stylish {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    
+    .qr-image {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+
+    /* 4. Asif 555 ID Button - Updated */
+    .add-link-btn {
+        display: block;
+        background: linear-gradient(135deg, #7d54a1, #c85a5a); /* Purple to Pink from your QR */
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 1.2rem; /* Thoda bada text */
+        transition: 0.3s;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    .add-link-btn:hover { opacity: 0.9; transform: scale(1.03); }
+
+    .close-txt {
+        color: #999;
+        cursor: pointer;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 </style>
 
 <div class="wechat-float-btn" onclick="document.getElementById('wechat-popup').style.display='flex'">
-    <svg viewBox="0 0 24 24" width="35" height="35" fill="white">
-        <path d="M8.5 14c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm4 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM17 11c.14 0 .25.11.25.25 0 .14-.11.25-.25.25s-.25-.11-.25-.25c0-.14.11-.25.25-.25zm-3 0c.14 0 .25.11.25.25 0 .14-.11.25-.25.25s-.25-.11-.25-.25c0-.14.11-.25.25-.25zM19 8.5c0-2.48-3.13-4.5-7-4.5S5 6.02 5 8.5c0 1.46.78 2.76 2.11 3.55l-.47 1.4c-.05.15.06.3.21.3h.05l1.64-.84c.47.12.96.19 1.46.19 1.05 0 2.05-.29 2.92-.81.65.51 1.48.81 2.38.81.42 0 .82-.06 1.19-.17l1.37.7c.05.03.11.05.17.05.12 0 .23-.08.26-.19l.39-1.17C20.25 11.23 21 10.15 21 8.95c0-.15-.02-.3-.05-.45h-.05c-.32.05-.64.08-.96.08-1.5 0-2.83-.58-3.79-1.52-.36.63-.82 1.17-1.35 1.59-.2.15-.43.29-.67.4-.3.14-.62.24-.95.3-.28.05-.56.08-.85.08-.28 0-.55-.03-.81-.07-.33-.06-.65-.16-.95-.3-.24-.11-.47-.25-.67-.4-.84-.66-1.39-1.63-1.39-2.73 0-.17.01-.33.04-.49C6.54 6.16 7.71 6 9 6c3.31 0 6 2.01 6 4.5 0 .43-.08.85-.23 1.23.47.17.97.27 1.48.27 2.21 0 4-1.57 4-3.5z"/>
+    <svg class="wechat-logo-svg" viewBox="0 0 24 24">
+        <path d="M8.5 14a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm4 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM17 11.25a.25.25 0 1 0 0-.5.25.25 0 0 0 0 .5zm-3 0a.25.25 0 1 0 0-.5.25.25 0 0 0 0 .5zM19.12 8.79C19.12 6.31 15.99 4.29 12.11 4.29C8.24 4.29 5.11 6.31 5.11 8.79C5.11 10.25 5.89 11.55 7.22 12.34l-.47 1.4c-.05.15.06.3.21.3h.05l1.64-.84c.47.12.96.19 1.46.19c1.05 0 2.05-.29 2.92-.81c.65.51 1.48.81 2.38.81c.42 0 .82-.06 1.19-.17l1.37.7c.05.03.11.05.17.05c.12 0 .23-.08.26-.19l.39-1.17c.56-.73 1.1-1.81 1.1-3.01zM9 6c3.31 0 6 2.01 6 4.5c0 .43-.08.85-.23 1.23c.47.17.97.27 1.48.27c2.21 0 4-1.57 4-3.5c0-1.93-1.79-3.5-4-3.5c-1.5 0-2.83.58-3.79 1.52c-.36-.63-.82-1.17-1.35-1.59c-.2-.15-.43-.29-.67-.4c-.3-.14-.62-.24-.95-.3c-.28-.05-.56-.08-.85-.08c-.28 0-.55.03-.81.07c-.33.06-.65.16-.95.3c-.24.11-.47.25-.67.4c-.84.66-1.39 1.63-1.39 2.73c0 .17.01.33.04.49C6.54 6.16 7.71 6 9 6z"/>
     </svg>
 </div>
 
 <div id="wechat-popup">
     <div class="qr-card-stylish">
-        <h2>WECHAT SUPPORT</h2>
-        <p>Scan QR or click below to add</p>
-        
         <img src="qr.jpg" alt="WeChat QR" class="qr-image">
 
-        <a href="https://wechat.com/asif555" class="add-link-btn">ADD ON WECHAT</a>
+        <a href="https://wechat.com/add/asif555" class="add-link-btn">Asif 555</a>
 
         <div class="close-txt" onclick="document.getElementById('wechat-popup').style.display='none'">
             [ Close Window ]
