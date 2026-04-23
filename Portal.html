@@ -5,81 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trading Portal | 2SMARTS</title>
     <style>
-        body { 
-            margin: 0; padding: 0; 
-            background: #0a0f1c; /* Aapki site wala dark theme */
-            color: white; 
-            font-family: 'Segoe UI', sans-serif; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            min-height: 100vh; 
-        }
+        body { margin: 0; padding: 0; background: #0a0f1c; color: white; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
         h1 { color: #f1c40f; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; text-align: center; }
-        
-        /* 4 Boxes ka Grid */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 20px; width: 90%; max-width: 1000px; 
-        }
-        
-        .card { 
-            background: #161d2f; 
-            border: 2px solid #f1c40f; 
-            padding: 40px 20px; 
-            border-radius: 15px; 
-            text-decoration: none; 
-            color: white; 
-            text-align: center; 
-            transition: 0.3s; 
-        }
-        
-        .card:hover { 
-            background: #f1c40f; 
-            color: #000; 
-            transform: translateY(-10px); 
-            box-shadow: 0 10px 30px rgba(241,196,15,0.4); 
-        }
-        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; width: 90%; max-width: 1150px; }
+        .card { background: #161d2f; border: 2px solid #f1c40f; padding: 40px 20px; border-radius: 15px; text-decoration: none; color: white; text-align: center; transition: 0.3s; }
+        .card:hover { background: #f1c40f; color: #000; transform: translateY(-10px); box-shadow: 0 10px 30px rgba(241,196,15,0.4); }
         .card div { font-size: 40px; margin-bottom: 10px; }
-        .card h3 { margin: 0; font-size: 20px; }
-        
-        .back-btn { 
-            margin-top: 50px; 
-            color: #888; 
-            text-decoration: none; 
-            border: 1px solid #444; 
-            padding: 10px 20px; 
-            border-radius: 50px; 
-            transition: 0.3s;
-        }
-        .back-btn:hover { color: #f1c40f; border-color: #f1c40f; }
+        .card h3 { margin: 0; font-size: 18px; }
+        .back { margin-top: 50px; color: #888; text-decoration: none; border: 1px solid #444; padding: 10px 20px; border-radius: 50px; }
     </style>
 </head>
 <body>
     <h1>SELECT CATEGORY</h1>
-    
     <div class="grid">
-        <a href="#" class="card">
-            <div>📱</div>
-            <h3>IPHONE</h3>
-        </a>
-
-        <a href="#" class="card">
-            <div>📲</div>
-            <h3>SAMSUNG</h3>
-        </a>
-
-        <a href="#" class="card">
-            <div>🤖</div>
-            <h3>GOOGLE PIXEL</h3>
-        </a>
-
-        <a href="#" class="card">
-            <div>📦</div>
-            <h3>OTHERS</h3>
-        </a>
+        <a href="#" class="card"><div>📱</div><h3>IPHONE</h3></a>
+        <a href="#" class="card"><div>📲</div><h3>SAMSUNG</h3></a>
+        <a href="#" class="card"><div>🤖</div><h3>GOOGLE PIXEL</h3></a>
+        <a href="#" class="card"><div>🚀</div><h3>APPS</h3></a>
+        <a href="#" class="card"><div>📦</div><h3>OTHERS</h3></a>
     </div>
-
-    <a href="index.html" class="back-btn">← Back to Main Website</a>
+    <a href="index.html" class="back">← Back to Home</a>
 </body>
 </html>
