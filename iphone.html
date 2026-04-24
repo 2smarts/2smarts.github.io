@@ -3,41 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone Collection | 2SMARTS</title>
+    <title>iPhone Collections</title>
     <style>
-        body { 
-            background: #0a0f1c; 
-            color: white; 
-            font-family: 'Inter', sans-serif; 
-            text-align: center; 
-            padding: 50px 20px; 
-            margin: 0;
+        body { background-color: #0d1117; color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        
+        /* Header Jo Yellow Tha */
+        h1 { color: #ffcc00; margin-top: 50px; font-size: 2.5rem; text-transform: uppercase; }
+
+        /* Photos ko Line Mein Lane Wala Dabba */
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
         }
-        h1 { 
-            color: #f1c40f; 
-            font-size: 2.5rem; 
-            text-transform: uppercase; 
+
+        /* Har Photo ka Style */
+        .photo-card {
+            width: 300px; /* Dabbe ki chaudai */
+            border: 2px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #161b22;
+        }
+
+        .photo-card img {
+            width: 100%; /* Photo dabbe mein fit rahegi */
+            display: block;
+        }
+
+        /* Back Button Jo Pehle se tha */
+        .back-btn {
+            display: inline-block;
             margin-bottom: 50px;
-        }
-        .empty-msg {
-            color: #888;
-            font-style: italic;
-            margin-bottom: 40px;
-        }
-        .back-btn { 
-            display: inline-block; 
-            padding: 12px 35px; 
-            border: 2px solid #f1c40f; 
-            color: #f1c40f; 
-            text-decoration: none; 
-            border-radius: 8px; 
+            padding: 12px 30px;
+            border: 2px solid #ffcc00;
+            color: #ffcc00;
+            text-decoration: none;
+            border-radius: 8px;
             font-weight: bold;
-            transition: 0.3s; 
-        }
-        .back-btn:hover { 
-            background: #f1c40f; 
-            color: black; 
-            box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
         }
     </style>
 </head>
@@ -45,9 +50,15 @@
 
     <h1>IPHONE COLLECTIONS</h1>
 
-    <p class="empty-msg">Currently, no items are available in this category.</p>
+    <div class="photo-container">
+        <div class="photo-card"><img src="ip1.jpg"></div>
+        
+        <div class="photo-card"><img src="ip2.jpg"></div>
+        
+        <div class="photo-card"><img src="ip3.jpg"></div>
+    </div>
 
-    <a href="Portal.html" class="back-btn">← BACK TO CATEGORIES</a>
+    <a href="index.html" class="back-btn">← BACK TO CATEGORIES</a>
 
 </body>
 </html>
