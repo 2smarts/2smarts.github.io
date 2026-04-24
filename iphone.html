@@ -3,105 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VVIP Collection Preview</title>
+    <title>IPHONE COLLECTION| 2SMARTS</title>
     <style>
-        /* TERA ORIGINAL UI (DARK & YELLOW) */
-        body {
-            background-color: #0b0e14;
-            color: #ffffff;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        h1 {
-            color: #f0c94d;
-            font-size: 45px;
-            margin-top: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 10px rgba(240, 201, 77, 0.2);
-        }
-
-        /* VVIP PHOTO GRID */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 40px;
-            width: 90%;
-            max-width: 1300px;
-        }
-
-        .card {
-            background: #1c2128;
-            border: 2px solid #30363d;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            text-align: center;
-            padding: 15px;
-        }
-
-        .card:hover {
-            border-color: #f0c94d;
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(240, 201, 77, 0.15);
-        }
-
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain; /* Photo khichegi nahi, asli dikhegi */
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #f0c94d;
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        /* BACK BUTTON (UI UNTOUCHED) */
-        .back-btn {
-            border: 2px solid #f0c94d;
-            color: #f0c94d;
-            padding: 12px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            margin-bottom: 60px;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background-color: #f0c94d;
-            color: #0b0e14;
-        }
+        body { background: #0a0f1c; color: white; font-family: sans-serif; text-align: center; padding: 50px 20px; }
+        h1 { color: #f1c40f; font-size: 2.5rem; text-transform: uppercase; }
+        .empty-msg { color: #888; font-style: italic; margin: 40px 0; }
+        .back-btn { display: inline-block; padding: 12px 35px; border: 2px solid #f1c40f; color: #f1c40f; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .back-btn:hover { background: #f1c40f; color: black; }
     </style>
 </head>
 <body>
-
-    <h1>IPHONE COLLECTIONS</h1>
-
-    <div class="photo-grid">
-        <div class="card"><img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500" alt="iPhone"><h3>iPhone 15 Pro</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500" alt="iPhone"><h3>iPhone 14 Pro</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1556656793-062ff9878258?w=500" alt="iPhone"><h3>iPhone 13 Gold</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1591337676887-a217a6970c8a?w=500" alt="iPhone"><h3>iPhone 12 Silver</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=500" alt="iPhone"><h3>iPhone 11 Black</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="iPhone"><h3>iPhone X Edition</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500" alt="iPhone"><h3>iPhone 15 Pink</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1512054834563-2bf39865583e?w=500" alt="iPhone"><h3>iPhone SE</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=500" alt="iPhone"><h3>iPhone Collection</h3></div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1565849906461-0eaa2c5bb41e?w=500" alt="iPhone"><h3>iPhone 13 Blue</h3></div>
-    </div>
-
-    <a href="index.html" class="back-btn">← BACK TO CATEGORIES</a>
-
+    <h1>SAMSUNG COLLECTIONS</h1>
+    <p class="empty-msg">Currently, no items are available in this category.</p>
+    <a href="Portal.html" class="back-btn">← BACK TO CATEGORIES</a>
 </body>
 </html>
