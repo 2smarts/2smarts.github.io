@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VVIP iPhone Collection</title>
+    <title>VVIP Collection Preview</title>
     <style>
-        /* TERA ORIGINAL THEME (UI MEHFOOZ HAI) */
+        /* TERA ORIGINAL UI (DARK & YELLOW) */
         body {
             background-color: #0b0e14;
             color: #ffffff;
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -19,57 +19,54 @@
 
         h1 {
             color: #f0c94d;
-            font-size: clamp(2rem, 8vw, 3.5rem); /* Mobile par khud set ho jayega */
-            margin: 60px 0 20px;
+            font-size: 45px;
+            margin-top: 50px;
             text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 3px;
-            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(240, 201, 77, 0.2);
         }
 
-        /* VVIP GRID DESIGN */
-        .collection-container {
+        /* VVIP PHOTO GRID */
+        .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            padding: 40px 20px;
+            padding: 40px;
             width: 90%;
             max-width: 1300px;
         }
 
-        /* PREMIUM CARDS */
-        .item-card {
-            background: #161b22;
-            border: 1px solid #30363d;
+        .card {
+            background: #1c2128;
+            border: 2px solid #30363d;
             border-radius: 20px;
-            padding: 15px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            transition: all 0.4s ease;
             text-align: center;
-            position: relative;
+            padding: 15px;
         }
 
-        .item-card:hover {
-            transform: scale(1.05);
+        .card:hover {
             border-color: #f0c94d;
-            box-shadow: 0 10px 30px rgba(240, 201, 77, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(240, 201, 77, 0.15);
         }
 
-        .item-card img {
+        .card img {
             width: 100%;
-            height: 220px;
-            object-fit: contain;
-            border-radius: 10px;
+            height: 250px;
+            object-fit: contain; /* Photo khichegi nahi, asli dikhegi */
+            border-radius: 12px;
             margin-bottom: 15px;
         }
 
-        .item-card h3 {
+        .card h3 {
             color: #f0c94d;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin: 10px 0;
-            text-transform: uppercase;
         }
 
-        /* BACK BUTTON (SAME DESIGN) */
+        /* BACK BUTTON (UI UNTOUCHED) */
         .back-btn {
             border: 2px solid #f0c94d;
             color: #f0c94d;
@@ -77,9 +74,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
-            margin: 50px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 60px;
             transition: 0.3s;
         }
 
@@ -93,17 +88,17 @@
 
     <h1>IPHONE COLLECTIONS</h1>
 
-    <div class="collection-container">
-        <div class="item-card"><img src="ip17.jpg"><h3>iPhone 17 Pro Max</h3></div>
-        <div class="item-card"><img src="ip16.jpg"><h3>iPhone 16 Pro Max</h3></div>
-        <div class="item-card"><img src="ip15.jpg"><h3>iPhone 15 Pro Max</h3></div>
-        <div class="item-card"><img src="ip14.jpg"><h3>iPhone 14 Pro Max</h3></div>
-        <div class="item-card"><img src="ip13.jpg"><h3>iPhone 13 Pro Max</h3></div>
-        <div class="item-card"><img src="ip12.jpg"><h3>iPhone 12 Pro Max</h3></div>
-        <div class="item-card"><img src="ip11.jpg"><h3>iPhone 11 Pro Max</h3></div>
-        <div class="item-card"><img src="ipx.jpg"><h3>iPhone X Edition</h3></div>
-        <div class="item-card"><img src="ip8.jpg"><h3>iPhone 8 Plus</h3></div>
-        <div class="item-card"><img src="ip7.jpg"><h3>iPhone 7 Plus</h3></div>
+    <div class="photo-grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500" alt="iPhone"><h3>iPhone 15 Pro</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500" alt="iPhone"><h3>iPhone 14 Pro</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1556656793-062ff9878258?w=500" alt="iPhone"><h3>iPhone 13 Gold</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1591337676887-a217a6970c8a?w=500" alt="iPhone"><h3>iPhone 12 Silver</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=500" alt="iPhone"><h3>iPhone 11 Black</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="iPhone"><h3>iPhone X Edition</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500" alt="iPhone"><h3>iPhone 15 Pink</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1512054834563-2bf39865583e?w=500" alt="iPhone"><h3>iPhone SE</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=500" alt="iPhone"><h3>iPhone Collection</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1565849906461-0eaa2c5bb41e?w=500" alt="iPhone"><h3>iPhone 13 Blue</h3></div>
     </div>
 
     <a href="index.html" class="back-btn">← BACK TO CATEGORIES</a>
