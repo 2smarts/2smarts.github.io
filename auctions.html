@@ -1,1 +1,203 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Mobile Auctions - 2SMARTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d2a5c;
+            --gold: #D4AF37;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fe;
+            color: #333;
+        }
+
+        /* Header Style */
+        .auction-header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .auction-header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--gold);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .auction-header p {
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Container & Cards */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .auction-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .card-header i {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .grading-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .photo-box {
+            height: 100px;
+            background: #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            border: 1px dashed #ccc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="auction-header">
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <h1>🇭🇰 GLOBAL AUCTIONS PARTNER 🇭🇰</h1>
+    <p>I bid directly for my clients in world-class auctions. From <b>Japan's</b> Softbank, Docomo, and AU to <b>USA's</b> Hyla, Mannapov, AT&T, T-Mobile, and EcoATM.</p>
+</header>
+
+<div class="container">
+    
+    <h2 class="section-title">🇯🇵 Japan Auction Sources</h2>
+    
+    <div class="auction-card">
+        <div class="card-header">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Softbank, Docomo & AU (Japan)</h3>
+        </div>
+        <p>Premium quality stock from Japan's leading carriers. High reliability and accurate testing.</p>
+        <div class="grading-box">
+            <strong>Standard Grading:</strong> Grade S (New), Grade A (Like New), Grade B (Minor Scratches), Grade C (Used).
+        </div>
+        <div class="photo-grid">
+            <div class="photo-box">Sample Image</div>
+            <div class="photo-box">Sample Image</div>
+            <div class="photo-box">Sample Image</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🇺🇸 USA Auction Sources</h2>
+
+    <div class="auction-card">
+        <div class="card-header">
+            <i class="fas fa-gavel"></i>
+            <h3>HYLA Mobile (USA)</h3>
+        </div>
+        <p>One of the largest trade-in collectors in the US. Massive inventory of iPhones and Samsung.</p>
+        <div class="grading-box">
+            <strong>HYLA Grading:</strong> Like New, A-Grade (Functional), B-Grade (Power Up), C-Grade (Cracked/Damage).
+        </div>
+        <div class="photo-grid">
+            <div class="photo-box">Hyla Stock 1</div>
+            <div class="photo-box">Hyla Stock 2</div>
+            <div class="photo-box">Hyla Stock 3</div>
+        </div>
+    </div>
+
+    <div class="auction-card">
+        <div class="card-header">
+            <i class="fas fa-network-wired"></i>
+            <h3>Carrier Auctions (AT&T, T-Mobile, Mannapov)</h3>
+        </div>
+        <p>Direct bidding for wholesale carrier stock. Bulk quantity available for global export.</p>
+        <div class="grading-box">
+            <strong>Grading Info:</strong> Fully tested carrier stock with clean ESN/IMEI verification.
+        </div>
+        <div class="photo-grid">
+            <div class="photo-box">Carrier Stock</div>
+            <div class="photo-box">Carrier Stock</div>
+        </div>
+    </div>
+
+    <div class="auction-card">
+        <div class="card-header">
+            <i class="fas fa-recycle"></i>
+            <h3>EcoATM Auctions</h3>
+        </div>
+        <p>Budget-friendly stock with high turnover. Best for wholesale distributors looking for volume.</p>
+        <div class="grading-box">
+            <strong>Grading:</strong> C-Grade and D-Grade mixed wholesale lots.
+        </div>
+        <div class="photo-grid">
+            <div class="photo-box">EcoATM Box 1</div>
+            <div class="photo-box">EcoATM Box 2</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
