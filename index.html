@@ -8,82 +8,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* === 1. GLOBAL SETTINGS & COLORS === */
+        /* === 1. GLOBAL SETTINGS === */
         :root {
             --primary: #0a192f;
             --accent: #c5a059;
             --text-light: #ffffff;
             --bg-light: #f4f7f6;
-            --card-bg: #ffffff;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg-light); color: var(--primary); line-height: 1.6; }
 
-        /* === 2. HEADER SECTION (Logo & Title) === */
+        /* === 2. HEADER SECTION (Now Fully Independent) === */
         header {
             background-color: var(--primary);
             color: var(--text-light);
-            padding: 50px 20px 30px;
+            padding: 60px 20px;
             text-align: center;
             background-image: radial-gradient(circle at 50% -20%, #1a365d, #0a192f);
+            margin-bottom: 20px; /* Header ko niche wale hisse se alag karne ke liye */
         }
         .company-name {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            letter-spacing: 2px;
             color: var(--accent);
-            margin-bottom: 5px;
+            letter-spacing: 2px;
         }
         .tagline {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 300;
             opacity: 0.8;
+            margin-top: 5px;
         }
 
-        /* === 3. VERTICAL NAVIGATION MENU === */
-        .nav-container {
-            background: var(--primary);
-            padding-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 3px solid var(--accent);
+        /* === 3. VERTICAL MENU SECTION (Standalone Box) === */
+        .menu-wrapper {
+            max-width: 400px;
+            margin: 0 auto 40px; /* Center aligned and separate from content */
+            padding: 0 20px;
         }
         .nav-menu {
             display: flex;
-            flex-direction: column; /* This makes it Vertical */
-            width: 100%;
-            max-width: 300px; /* Menu ki width control karne ke liye */
-            gap: 10px;
-            padding: 0 20px;
+            flex-direction: column;
+            gap: 12px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid rgba(10, 25, 47, 0.1);
         }
         .nav-link {
-            color: var(--text-light);
+            color: var(--primary);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.95rem;
+            font-weight: 700;
             text-transform: uppercase;
             text-align: center;
-            padding: 12px;
-            border-radius: 8px;
-            background: rgba(255,255,255,0.05);
-            transition: 0.3s;
-            border: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 14px;
+            border-radius: 10px;
+            background: var(--bg-light);
+            transition: 0.3s ease;
+            border: 1px solid transparent;
         }
         .nav-link:hover, .nav-link.active {
-            background: var(--accent);
-            color: var(--primary);
-            transform: scale(1.02);
+            background: var(--primary);
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        /* === 4. MAIN CONTENT CONTAINER === */
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
+        /* === 4. CONTENT & CARDS === */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .section-box {
             background: white;
             padding: 30px;
@@ -91,7 +85,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             margin-bottom: 30px;
         }
-
         .section-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -99,48 +92,23 @@
             border-left: 5px solid var(--accent);
             padding-left: 15px;
         }
-
-        /* === 5. GRID & CARDS === */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card {
-            background: var(--card-bg);
+            background: white;
             padding: 25px;
             border-radius: 12px;
             border-top: 5px solid var(--accent);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
         }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-bottom: 10px; color: var(--primary); }
 
-        /* === 6. FOOTER (With New Address Location) === */
+        /* === 5. FOOTER === */
         footer {
             background: #e9ecef;
             padding: 40px 20px;
             text-align: center;
             margin-top: 50px;
-            border-top: 1px solid #ddd;
         }
-        .footer-address {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        .footer-address i { color: var(--accent); margin-right: 8px; }
-
-        /* === 7. FLOATING BUTTONS === */
-        .whatsapp-fixed {
-            position: fixed; bottom: 30px; right: 30px;
-            background: #25d366; color: white; width: 60px; height: 60px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            text-decoration: none; z-index: 1000;
-        }
+        .footer-address { font-weight: 600; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -150,7 +118,7 @@
         <p class="tagline">Your Global Sourcing & Tech Partner</p>
     </header>
 
-    <div class="nav-container">
+    <div class="menu-wrapper">
         <nav class="nav-menu">
             <a href="index.html" class="nav-link active">Home</a>
             <a href="mobile-trading.html" class="nav-link">Mobile Trading</a>
@@ -161,40 +129,34 @@
     </div>
 
     <div class="container">
-        
         <div class="section-box">
             <h2 class="section-title">Core Business Operations</h2>
-            <p>Expert trading in <strong>New & Used Mobile Devices</strong> and high-demand <strong>Electronics Stock Lots</strong> across HK, USA, and Japan. We also provide modern digital solutions to streamline your business.</p>
+            <p>Expert trading in <strong>New & Used Mobile Devices</strong> and high-demand <strong>Electronics Stock Lots</strong> across HK, USA, and Japan.</p>
         </div>
 
         <div class="grid">
             <div class="card">
                 <h3>📱 Direct Trading</h3>
-                <p>End-to-end buying and selling of premium electronics, smartphones, and stock lots globally.</p>
+                <p>End-to-end buying and selling of premium electronics globally.</p>
             </div>
             <div class="card">
                 <h3>🤝 Managed Services</h3>
-                <p>Your local agent in HK for supplier coordination, quality inspection, and direct pickups.</p>
+                <p>Your local agent in HK for supplier coordination and quality inspection.</p>
             </div>
             <div class="card">
                 <h3>📦 Logistics Support</h3>
-                <p>Volume-based freight consolidation and secure shipping from origin directly to your warehouse.</p>
+                <p>Volume-based freight consolidation and secure shipping to your warehouse.</p>
             </div>
         </div>
-
     </div>
 
     <footer>
         <div class="footer-address">
-            <i class="fas fa-map-marker-alt"></i> Hang Wan Building, Granville Road, Hong Kong
+            <i class="fas fa-map-marker-alt" style="color:var(--accent)"></i> Hang Wan Building, Granville Road, Hong Kong
         </div>
-        <p>Email: 2smartspvtltd@gmail.com | Phone/WA: +852 6025 7569</p>
-        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 2SMARTS PVT LIMITED. Registered in SAR Hong Kong.</p>
+        <p>Email: 2smartspvtltd@gmail.com | WA: +852 6025 7569</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 2SMARTS PVT LIMITED.</p>
     </footer>
-
-    <a href="https://wa.me/85260257569" class="whatsapp-fixed" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
 </body>
 </html>
