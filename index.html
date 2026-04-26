@@ -117,6 +117,50 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
+        /* === NEW: DARK MARKET FLOW CARD === */
+        .market-flow {
+            background: linear-gradient(145deg, #0a192f, #112240);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 20px 0 40px; /* Neechay thoda gap rakha hai */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .market-flow h2 { 
+            color: var(--accent); 
+            font-size: 1.8rem; 
+            margin-bottom: 25px; 
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(197,160,89,0.2);
+            padding-bottom: 10px;
+        }
+        .market-flow h3 { 
+            color: var(--accent); 
+            margin-bottom: 15px; 
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .market-flow ul { list-style: none; padding: 0; }
+        .market-flow ul li { 
+            margin-bottom: 12px; 
+            font-size: 1rem; 
+            display: flex; 
+            align-items: center; 
+            color: #ccd6f6;
+        }
+        .market-flow ul li::before { 
+            content: "\f0fb"; /* Airplane Icon */
+            font-family: "Font Awesome 6 Free"; 
+            font-weight: 900; 
+            color: var(--accent); 
+            margin-right: 12px;
+        }
+
         /* === 5. FOOTER === */
         footer {
             background: #e9ecef;
