@@ -161,6 +161,50 @@
             margin-right: 12px;
         }
 
+        /* === Floating Social Buttons === */
+        .social-float {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-float:hover { transform: scale(1.1); }
+
+        /* Right Side: WhatsApp */
+        .whatsapp-btn {
+            right: 30px;
+            background: #25d366;
+        }
+
+        /* Left Side: WeChat */
+        .wechat-btn {
+            left: 30px;
+            background: #09b83e;
+            cursor: pointer;
+        }
+
+        /* WeChat Popup for QR (Optional) */
+        .wechat-btn:hover::after {
+            content: "ID: 2SMARTS_HK"; /* asif555 */
+            position: absolute;
+            bottom: 70px;
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
         /* === 5. FOOTER === */
         footer {
             background: #e9ecef;
@@ -242,7 +286,13 @@
         </div>
         <p>Email: 2smartspvtltd@gmail.com | WA: +852 6025 7569</p>
         <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 2SMARTS PVT LIMITED.</p>
-    </footer>
+    </footer> <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="social-float wechat-btn" title="WeChat ID: 2SMARTS_HK">
+        <i class="fab fa-weixin"></i>
+    </div>
 
 </body>
 </html>
