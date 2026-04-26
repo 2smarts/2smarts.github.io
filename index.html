@@ -304,12 +304,32 @@
         <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-        <div class="social-float wechat-btn" onclick="showWeChatID()">
-        <i class="fab fa-weixin"></i>
+        <div class="social-float wechat-btn" onclick="openWeChat()">
+    <i class="fab fa-weixin"></i>
+</div>
+
+<div id="wechatModal" class="wechat-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeWeChat()">&times;</span>
+        <h3 style="color: #09b83e; margin-bottom: 10px;">Scan WeChat QR</h3>
+        <img src="images/wechat-qr.png" alt="WeChat QR">
+        <p style="margin-top: 10px; font-weight: bold; color: #333;">ID: asif555</p>
+    </div>
+</div>
 
     <script>
-    function showWeChatID() {
-        alert("Our WeChat ID is: asif555\nPlease copy and search in WeChat app.");
+    function openWeChat() {
+        document.getElementById("wechatModal").style.display = "flex";
+    }
+    function closeWeChat() {
+        document.getElementById("wechatModal").style.display = "none";
+    }
+    // Agar modal se bahar click karein tab bhi band ho jaye
+    window.onclick = function(event) {
+        let modal = document.getElementById("wechatModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
 
