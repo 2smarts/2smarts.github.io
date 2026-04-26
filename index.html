@@ -3,749 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2SMARTS PVT LIMITED | Premium Global Sourcing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <title>2SMARTS PVT LIMITED | Global Sourcing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* === PREMIUM GLOBAL SETTINGS === */
+        /* === 1. GLOBAL SETTINGS === */
         :root {
-            --primary: #0a0e27;
-            --secondary: #1a1a4d;
-            --accent: #00f0ff;
-            --accent-glow: #0099cc;
-            --gold: #d4af37;
-            --rose: #ff1654;
+            --primary: #1a1a3e;
+            --accent: #00d4ff;
+            --secondary: #ff1b6d;
             --text-light: #ffffff;
-            --text-dark: #0a0e27;
+            --bg-light: #0d1b2a;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0d1b2a 0%, #1a1a3e 100%); color: var(--primary); line-height: 1.6; min-height: 100vh; }
 
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        }
-
-        body { 
-            background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
-            color: var(--text-dark); 
-            line-height: 1.8; 
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(255, 22, 84, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* === LUXURY HEADER WITH PREMIUM EFFECTS === */
+        /* === 2. HEADER SECTION (Now Fully Independent) === */
         header {
-            background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #1a3a52 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             color: var(--text-light);
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 2px solid var(--gold);
-            box-shadow: 0 30px 100px rgba(212, 175, 55, 0.2);
+            margin-bottom: 20px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
         }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
-            animation: float 20s infinite ease-in-out;
-        }
-
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: -50%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 22, 84, 0.1) 0%, transparent 70%);
-            animation: float 25s infinite ease-in-out reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(30px); }
-        }
-
         .company-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 50%, #00ffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 3px;
-            text-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
-            position: relative;
-            z-index: 2;
-            margin-bottom: 10px;
+            color: #00d4ff;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
         }
-
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 300;
-            opacity: 0.95;
-            color: var(--gold);
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 2;
+            opacity: 0.9;
+            margin-top: 5px;
+            color: #ffffff;
         }
 
-        /* === PREMIUM NAVIGATION === */
+        /* === 3. PREMIUM VERTICAL MENU === */
         .menu-wrapper {
-            max-width: 500px;
-            margin: -50px auto 60px;
+            max-width: 450px;
+            margin: -40px auto 40px;
             padding: 0 20px;
             position: relative;
-            z-index: 20;
+            z-index: 10;
         }
-
         .nav-menu {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            background: rgba(26, 26, 77, 0.98);
-            padding: 35px;
-            border-radius: 25px;
-            box-shadow: 0 30px 80px rgba(0, 240, 255, 0.25), 
-                        0 0 40px rgba(212, 175, 55, 0.15),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border: 2px solid var(--gold);
-            backdrop-filter: blur(20px);
-            position: relative;
+            gap: 15px;
+            background: rgba(26, 26, 62, 0.95);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 212, 255, 0.2), 0 0 30px rgba(240, 147, 251, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            backdrop-filter: blur(10px);
         }
-
-        .nav-menu::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
         .nav-link {
             color: var(--text-light);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.95rem;
+            font-weight: 700;
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            padding: 18px 25px;
+            padding: 15px 20px;
             border-radius: 12px;
-            background: linear-gradient(90deg, rgba(0, 240, 255, 0.05) 0%, transparent 100%);
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border-left: 3px solid transparent;
-            letter-spacing: 0.5px;
-            position: relative;
+            background: rgba(102, 126, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-left: 4px solid transparent;
         }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: width 0.4s ease;
-            transform: translateY(-50%);
-        }
-
         .nav-link i {
-            margin-right: 12px;
-            font-size: 1.1rem;
-            color: var(--accent);
-            transition: all 0.3s ease;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+            color: #00d4ff;
         }
-
         .nav-link:hover {
-            background: linear-gradient(90deg, var(--accent) 0%, rgba(0, 240, 255, 0.3) 100%);
-            color: var(--text-dark);
-            border-left: 3px solid var(--gold);
-            transform: translateX(8px);
-            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.4);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #00d4ff;
+            border-left: 4px solid #00d4ff;
+            transform: translateX(10px);
+            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.4);
         }
-
-        .nav-link:hover::after {
-            width: 30px;
-        }
-
-        .nav-link:hover i {
-            color: var(--gold);
-            transform: rotateY(20deg);
-        }
-
         .nav-link.active {
-            background: linear-gradient(90deg, var(--accent) 0%, rgba(212, 175, 55, 0.3) 100%);
-            color: var(--text-dark);
-            border-left: 3px solid var(--gold);
-            box-shadow: 0 10px 35px rgba(0, 240, 255, 0.35);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            color: #00d4ff;
+            border-left: 4px solid #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
 
-        /* === PREMIUM CONTENT SECTIONS === */
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
-
+        /* === 4. CONTENT & CARDS === */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         .section-box {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 25px 80px rgba(0, 240, 255, 0.2), 0 0 60px rgba(212, 175, 55, 0.1);
-            margin-bottom: 50px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            position: relative;
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
         }
-
-        .section-box::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        }
-
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, #00ffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            border-left: 5px solid var(--gold);
-            padding-left: 20px;
-            letter-spacing: 1px;
-        }
-
-        .section-box p {
-            color: #333;
-            font-size: 1.05rem;
-            line-height: 1.9;
-        }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 245, 250, 0.95) 100%);
-            padding: 40px;
-            border-radius: 18px;
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 15px 50px rgba(0, 240, 255, 0.1), 0 0 40px rgba(212, 175, 55, 0.05);
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent 0%, rgba(0, 240, 255, 0.05) 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            border-radius: 18px;
-        }
-
-        .card::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 50%, var(--rose) 100%);
-            border-radius: 18px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 30px 80px rgba(0, 240, 255, 0.25), 0 0 60px rgba(212, 175, 55, 0.15);
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card:hover::after {
-            opacity: 0.3;
-        }
-
-        .card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 15px;
-            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            border-left: 5px solid #00d4ff;
+            padding-left: 15px;
+        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-image: linear-gradient(135deg, #00d4ff 0%, #764ba2 100%) 1;
+            box-shadow: 0 5px 25px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
         }
 
-        .card p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-
-        /* === PREMIUM MARKET FLOW === */
+        /* === NEW: DARK MARKET FLOW CARD === */
         .market-flow {
-            background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(240, 147, 251, 0.15) 100%);
             color: white;
-            padding: 50px;
-            border-radius: 25px;
-            margin: 50px 0;
-            box-shadow: 0 30px 100px rgba(0, 240, 255, 0.25), 
-                        0 0 60px rgba(212, 175, 55, 0.15),
-                        inset 0 1px 0 rgba(0, 240, 255, 0.2);
-            border: 2px solid var(--gold);
+            padding: 35px;
+            border-radius: 20px;
+            margin: 20px 0 40px;
+            box-shadow: 0 10px 50px rgba(0, 212, 255, 0.2), inset 0 1px 0 rgba(0, 212, 255, 0.1);
+            border: 2px solid rgba(0, 212, 255, 0.4);
             position: relative;
             overflow: hidden;
         }
-
         .market-flow::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--accent), transparent);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d4ff, transparent);
         }
-
-        .market-flow::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
-        }
-
         .market-flow h2 { 
-            font-family: 'Playfair Display', serif;
-            color: var(--gold); 
-            font-size: 2rem; 
-            margin-bottom: 30px; 
+            color: #00d4ff; 
+            font-size: 1.8rem; 
+            margin-bottom: 25px; 
             text-transform: uppercase;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 15px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 2;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
         }
-
         .market-flow h3 { 
-            color: var(--accent); 
-            margin-bottom: 20px; 
-            font-size: 1.3rem;
+            color: #ff1b6d; 
+            margin-bottom: 15px; 
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            position: relative;
-            z-index: 2;
+            gap: 10px;
         }
-
-        .market-flow ul { 
-            list-style: none; 
-            padding: 0;
-            position: relative;
-            z-index: 2;
-        }
-
+        .market-flow ul { list-style: none; padding: 0; }
         .market-flow ul li { 
-            margin-bottom: 15px; 
+            margin-bottom: 12px; 
             font-size: 1rem; 
             display: flex; 
             align-items: center; 
-            color: #e0e0e0;
-            font-weight: 500;
+            color: #ffffff;
         }
-
         .market-flow ul li::before { 
             content: "\f0fb";
             font-family: "Font Awesome 6 Free"; 
             font-weight: 900; 
-            color: var(--gold); 
-            margin-right: 15px;
-            font-size: 0.8rem;
+            color: #00d4ff; 
+            margin-right: 12px;
         }
 
-        /* === PREMIUM SOCIAL BUTTONS === */
+        /* === Floating Social Buttons === */
         .social-float {
             position: fixed;
             bottom: 30px;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 30px;
             color: white;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 0 30px currentColor;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
             z-index: 9999;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.3s ease;
             text-decoration: none;
-            border: 2px solid rgba(212, 175, 55, 0.5);
-            position: relative;
+            border: 2px solid rgba(0, 212, 255, 0.5);
         }
-
-        .social-float::before {
-            content: '';
-            position: absolute;
-            inset: -5px;
-            border-radius: 50%;
-            background: radial-gradient(circle, currentColor, transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
         .social-float:hover { 
-            transform: scale(1.2) rotate(5deg);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px currentColor;
+            transform: scale(1.15);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
         }
 
-        .social-float:hover::before {
-            opacity: 0.2;
-        }
-
+        /* Right Side: WhatsApp */
         .whatsapp-btn {
             right: 30px;
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            background: linear-gradient(135deg, #25d366 0%, #20ba58 100%);
         }
 
+        /* Left Side: WeChat */
         .wechat-btn {
             left: 30px;
             background: linear-gradient(135deg, #09b83e 0%, #058630 100%);
             cursor: pointer;
         }
 
+        /* Left Side: Email */
         .email-btn {
             left: 30px;
-            bottom: 120px;
-            background: linear-gradient(135deg, #ff1654 0%, #d4306c 100%);
+            bottom: 110px;
+            background: linear-gradient(135deg, #ff1b6d 0%, #e60d5a 100%);
         }
 
-        /* === PREMIUM MODAL === */
-        .wechat-modal {
-            display: none;
-            position: fixed; 
-            z-index: 99999;
-            left: 0; 
-            top: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.95);
-            align-items: center; 
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            animation: modalFadeIn 0.4s ease;
-        }
+       /* WeChat QR Modal Styling */
+.wechat-modal {
+    display: none;
+    position: fixed; 
+    z-index: 99999;
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center; 
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    padding: 20px; 
+    border-radius: 15px; 
+    text-align: center; 
+    max-width: 300px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+}
+.modal-content img { width: 100%; border-radius: 10px; border: 2px solid #00d4ff; }
+.close-btn { 
+    position: absolute; top: 10px; right: 15px; 
+    font-size: 24px; cursor: pointer; color: #ff1b6d;
+    transition: all 0.3s ease;
+}
+.close-btn:hover {
+    transform: scale(1.2);
+}
 
-        @keyframes modalFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f8ff 100%);
-            padding: 40px; 
-            border-radius: 25px; 
-            text-align: center; 
-            max-width: 360px;
-            position: relative;
-            box-shadow: 0 50px 150px rgba(0, 240, 255, 0.4), 0 0 100px rgba(212, 175, 55, 0.2);
-            border: 2px solid var(--gold);
-            animation: modalScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        @keyframes modalScaleIn {
-            from { 
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to { 
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--accent), transparent);
-        }
-
-        .modal-content img { 
-            width: 100%; 
-            border-radius: 15px; 
-            border: 3px solid var(--gold);
-            box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2);
-        }
-
-        .close-btn { 
-            position: absolute; 
-            top: 15px; 
-            right: 15px; 
-            font-size: 28px; 
-            cursor: pointer; 
-            color: var(--accent);
-            transition: all 0.3s ease;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(0, 240, 255, 0.1);
-            border: 1px solid var(--accent);
-        }
-
-        .close-btn:hover {
-            transform: scale(1.15) rotate(90deg);
-            background: var(--accent);
-            color: white;
-        }
-
-        /* === PREMIUM FOOTER === */
+        /* === 5. FOOTER === */
         footer {
-            background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
-            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(240, 147, 251, 0.2) 100%);
+            padding: 40px 20px;
             text-align: center;
-            margin-top: 80px;
-            border-top: 2px solid var(--gold);
-            color: var(--text-light);
-            position: relative;
-            box-shadow: 0 -10px 40px rgba(212, 175, 55, 0.1);
+            margin-top: 50px;
+            border-top: 2px solid rgba(0, 212, 255, 0.3);
+            color: #ffffff;
         }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), var(--accent), transparent);
-        }
-
-        .footer-address { 
-            font-weight: 600; 
-            margin-bottom: 10px;
-            color: var(--gold);
-            font-size: 1.05rem;
-        }
-
-        footer p {
-            color: #ccc;
-            font-weight: 500;
-        }
-
-        footer p strong {
-            color: var(--accent);
-        }
-
-        /* === SCROLL ANIMATIONS === */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section-box, .card, .market-flow {
-            animation: slideInUp 0.8s ease-out;
-        }
+        .footer-address { font-weight: 600; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="company-name">2SMARTS</div>
-        <p style="font-size: 0.9rem; margin-bottom: 20px; letter-spacing: 2px;">PREMIUM GLOBAL SOURCING</p>
-        <p class="tagline">🇭🇰 HONG KONG EXCELLENCE 🇭🇰</p>
+        <div class="company-name">2SMARTS PVT LIMITED 🇭🇰</div>
+        <p class="tagline">Your Global Sourcing & Tech Partner</p>
     </header>
 
     <div class="menu-wrapper">
         <nav class="nav-menu">
             <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
-            <a href="app.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Business Solutions</a>
-            <a href="mobile-trading.html" class="nav-link"><i class="fas fa-chart-line"></i> Market Insights</a>
-            <a href="it-solutions.html" class="nav-link"><i class="fas fa-rocket"></i> Premium Services</a>
+            <a href="app.html" class="nav-link"><i class="fas fa-mobile-alt"></i> Free Business App</a>
+            <a href="mobile-trading.html" class="nav-link"><i class="fas fa-gavel"></i> Mobile Auctions & Company Details</a>
+            <a href="it-solutions.html" class="nav-link"><i class="fas fa-laptop-code"></i> IT Solutions</a>
          </nav>
     </div>
 
-    <div class="container">
-        <div class="section-box">
-            <h2 class="section-title">Luxury Business Operations</h2>
-            <p>
-                Specializing in the <strong>premium global trade</strong> of <strong>New & Pre-owned Mobile Devices</strong>. 
-                We source high-demand electronics stock lots directly from <strong>Hong Kong, Japan, and the USA</strong>, 
-                delivering <strong>uncompromising quality</strong> and <strong>competitive excellence</strong> across all markets.
-                Our expertise spans logistics coordination, bulk operations, and strategic sourcing partnerships.
-            </p>
-        </div>
+    <div class="section-box">
+    <h2 class="section-title">Core Business Operations</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8; color: #333; font-weight: 400;">
+        Specializing in the global trade of <strong>New & Pre-owned Mobile Devices</strong>. We source high-demand electronics stock lots directly from <strong>Hong Kong, Japan, and the USA</strong>, with dedicated support for bulk orders and logistics coordination across all markets.
+    </p>
+</div>
 
-        <div class="market-flow">
-            <h2>Global Market Flow</h2>
-            <div class="grid">
-                <div>
-                    <h3><i class="fas fa-plane-departure"></i> Premium Sources</h3>
-                    <ul>
-                        <li>Hong Kong Distribution Centers</li>
-                        <li>East Asian Manufacturing Hubs</li>
-                        <li>North American Warehouses</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3><i class="fas fa-globe-americas"></i> Strategic Markets</h3>
-                    <ul>
-                        <li>Middle East & GCC Region</li>
-                        <li>South Asian Networks</li>
-                        <li>Pan-Asian Territories</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+    <div class="market-flow">
+        <h2 style="color: #00d4ff; font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid rgba(0, 212, 255, 0.3); padding-bottom: 10px; text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);">
+            Global Market Flow
+        </h2>
         <div class="grid">
-            <div class="card">
-                <h3>💎 Elite Direct Trading</h3>
-                <p>Premium bulk import and export services specializing in new and pre-owned mobile devices. 
-                Guaranteed top-tier inventory with competitive market positioning and international compliance standards.</p>
+            <div>
+                <h3><i class="fas fa-plane-departure"></i> Suppliers</h3>
+                <ul>
+                    <li>Domestic Hong Kong</li>
+                    <li>East Asia Markets</li>
+                    <li>USA Distributions</li>
+                </ul>
             </div>
-            
-            <div class="card">
-                <h3>✨ Concierge Services</h3>
-                <p>Your dedicated strategic partner in Hong Kong. End-to-end coordination from supplier management to 
-                rigorous quality assurance, ensuring your inventory exceeds international standards and market expectations.</p>
-            </div>
-            
-            <div class="card">
-                <h3>🌐 Global Logistics</h3>
-                <p>Comprehensive supply chain solutions with high-volume freight consolidation and secure international shipping. 
-                Direct warehouse delivery with real-time tracking and premium white-glove service.</p>
+            <div>
+                <h3><i class="fas fa-plane-arrival"></i> Key Markets</h3>
+                <ul>
+                    <li>Domestic Hong Kong</li>
+                    <li>Middle East </li>
+                    <li>South Asia </li>
+                </ul>
             </div>
         </div>
     </div>
+
+        <div class="grid">
+    <div class="card">
+        <h3>📱 Direct Trading</h3>
+        <p>Specializing in the bulk import and export of premium new and pre-owned mobile devices. We ensure a consistent supply of top-tier electronics with competitive market pricing.</p>
+    </div>
+    
+    <div class="card">
+        <h3>🤝 Managed Services</h3>
+        <p>Your dedicated strategic partner in HK. We handle everything from supplier coordination to rigorous quality inspections, ensuring your inventory meets international standards.</p>
+    </div>
+    
+    <div class="card">
+        <h3>📦 Logistics Support</h3>
+        <p>Reliable end-to-end supply chain solutions. We offer high-volume freight consolidation and secure international shipping directly to your warehouse.</p>
+    </div>
+</div>
 
     <footer>
         <div class="footer-address">
-            <i class="fas fa-crown"></i> Premium Office: <strong>Hang Wan Building, Granville Road, Hong Kong</strong>
+            <i class="fas fa-map-marker-alt" style="color:#00d4ff;"></i> Hang Wan Building, Granville Road, Hong Kong
         </div>
-        <p style="margin-top: 15px;">📧 <strong>Email:</strong> 2smartspvtltd@gmail.com | 💬 <strong>WhatsApp:</strong> +852 6025 7569</p>
-        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">&copy; 2026 2SMARTS PVT LIMITED. All Rights Reserved. Premium Global Partner.</p>
+        <p>Email: 2smartspvtltd@gmail.com | WA: +852 6025 7569</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 2SMARTS PVT LIMITED.</p>
+        
     </footer> 
     
-    <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank" title="Connect on WhatsApp">
+        <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    
-    <a href="mailto:2smartspvtltd@gmail.com?subject=Premium Business Inquiry" class="social-float email-btn" title="Send Email">
+        <a href="mailto:2smartspvtltd@gmail.com?subject=Business Inquiry" class="social-float email-btn">
         <i class="fas fa-envelope"></i>
     </a>
-    
-    <div class="social-float wechat-btn" onclick="openWeChat()" title="Connect on WeChat">
+        <div class="social-float wechat-btn" onclick="openWeChat()">
         <i class="fab fa-weixin"></i>
-    </div>
+</div>
 
-    <div id="wechatModal" class="wechat-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeWeChat()">✕</span>
-            <h3 style="background: linear-gradient(90deg, #00f0ff 0%, #d4af37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 20px; font-size: 1.3rem; font-weight: 700;">WeChat Connection</h3>
-            
-            <img src="wechat-qr.jpg" alt="WeChat QR Code">
-            
-            <p style="margin-top: 20px; font-weight: 700; color: #0a0e27; font-size: 1.15rem;">
-                ID: <span style="color: #00f0ff;">asif555</span>
-            </p>
-            <p style="font-size: 0.9rem; color: #666; padding: 0 15px; margin-top: 10px;">
-                Save the QR code or copy the ID to add us on WeChat for premium business communication.
-            </p>
-        </div>
+<div id="wechatModal" class="wechat-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeWeChat()">&times;</span>
+        <h3 style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px;">Connect on WeChat</h3>
+        
+        <img src="wechat-qr.jpg" alt="WeChat QR">
+        
+        <p style="margin-top: 15px; font-weight: bold; color: #1a1a3e; font-size: 1.1rem;">
+            ID: asif555
+        </p>
+        <p style="font-size: 0.85rem; color: #666; padding: 0 10px;">
+            Please <strong>Save QR</strong> or <strong>Copy ID</strong> and search in WeChat app to add us.
+        </p>
     </div>
+</div>
 
     <script>
-        function openWeChat() {
-            var modal = document.getElementById("wechatModal");
-            if(modal) {
-                modal.style.display = "flex";
-            }
-
-            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                window.location.href = "weixin://"; 
-            }
+    function openWeChat() {
+        var modal = document.getElementById("wechatModal");
+        if(modal) {
+            modal.style.display = "flex";
         }
 
-        function closeWeChat() {
-            document.getElementById("wechatModal").style.display = "none";
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = "weixin://"; 
         }
+    }
 
-        // Close modal on outside click
-        window.addEventListener('click', function(event) {
-            var modal = document.getElementById("wechatModal");
-            if(event.target == modal) {
-                closeWeChat();
-            }
-        });
-    </script>
+    function closeWeChat() {
+        document.getElementById("wechatModal").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
