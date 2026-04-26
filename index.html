@@ -193,6 +193,13 @@
             cursor: pointer;
         }
 
+        /* Left Side: Email (WeChat ke upar) */
+        .email-btn {
+            left: 30px;
+            bottom: 110px; /* Isse WeChat ke upar shift kar diya */
+            background: #ea4335; /* Google Red for Email */
+        }
+
        /* WeChat QR Modal Styling */
 .wechat-modal {
     display: none; /* Default band rahega */
@@ -304,6 +311,13 @@
         <a href="https://wa.me/85260257569" class="social-float whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <a href="2smartspvtltd@gmail.com?subject=Business Inquiry" class="social-float email-btn">
+    <i class="fas fa-envelope"></i>
+</a>
+
+<div class="social-float wechat-btn" onclick="openWeChat()">
+    <i class="fab fa-weixin"></i>
+</div>
         <div class="social-float wechat-btn" onclick="openWeChat()">
     <i class="fab fa-weixin"></i>
 </div>
