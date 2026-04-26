@@ -19,94 +19,16 @@
             padding: 0;
             background-color: #f4f7fe;
             color: #333;
-        }
-
-        /* Header Style */
-        .auction-header {
-            background: var(--bg-gradient);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .auction-header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: var(--gold);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .auction-header p {
-            font-size: 16px;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
             line-height: 1.6;
         }
 
-        /* Container & Cards */
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            border-left: 5px solid var(--primary);
-            padding-left: 15px;
-            margin: 40px 0 20px;
-            color: var(--primary);
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .auction-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .card-header i {
-            font-size: 24px;
-            color: var(--primary);
-        }
-
-        .grading-box {
-            background: #f9f9f9;
-            border-left: 4px solid var(--gold);
-            padding: 15px;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .photo-box {
-            height: 100px;
-            background: #eee;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 12px;
-            border: 1px dashed #ccc;
+        /* Header Section */
+        .auction-header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .back-btn {
@@ -116,88 +38,222 @@
             text-decoration: none;
             font-weight: bold;
             background: rgba(0,0,0,0.2);
-            padding: 8px 15px;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(0,0,0,0.4); }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-text {
+            max-width: 850px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .market-title {
+            font-size: 24px;
+            color: var(--primary);
+            border-left: 6px solid var(--gold);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Cards Style */
+        .auction-card {
+            background: white;
             border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eef1f6;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 22px;
+        }
+
+        .badge {
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+        .badge-japan { background: #009245; }
+        .badge-usa { background: #ea4335; }
+
+        /* Grading Box */
+        .grading-section {
+            background: #f8faff;
+            border: 1px solid #e1e8f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .grading-section h4 {
+            margin-top: 0;
+            color: #555;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .photo-box {
+            background: #f0f2f5;
+            border: 2px dashed #cbd5e0;
+            border-radius: 12px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .photo-box:hover {
+            border-color: var(--gold);
+            background: #fff;
+            color: var(--primary);
+        }
+
+        .photo-box i { font-size: 30px; margin-bottom: 10px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-text { font-size: 24px; }
+            .photo-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-<header class="auction-header">
-    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-    <h1>🇭🇰 GLOBAL AUCTIONS PARTNER 🇭🇰</h1>
-    <p>I bid directly for my clients in world-class auctions. From <b>Japan's</b> Softbank, Docomo, and AU to <b>USA's</b> Hyla, Mannapov, AT&T, T-Mobile, and EcoATM.</p>
-</header>
+    <header class="auction-header">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div class="logo-text">🇭🇰 2SMARTS PVT LIMITED 🇭🇰</div>
+        <p class="intro-text">
+            <strong>We specialize in direct bidding and strategic sourcing</strong> for our global clients across world-class mobile auctions. 
+            Leveraging direct access to <strong>Japan</strong> and <strong>USA</strong> premier networks, we ensure premium stock acquisition at competitive market rates.
+        </p>
+    </header>
 
-<div class="container">
-    
-    <h2 class="section-title">🇯🇵 Japan Auction Sources</h2>
-    
-    <div class="auction-card">
-        <div class="card-header">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Softbank, Docomo & AU (Japan)</h3>
+    <div class="container">
+        
+        <h2 class="market-title"><i class="fas fa-globe-asia"></i> Japan Auction Market</h2>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>Softbank Auctions</h3>
+                <span class="badge badge-japan">Japan Market</span>
+            </div>
+            <p>Exclusive access to Softbank's high-quality carrier inventory. Renowned for rigorous hardware testing.</p>
+            <div class="grading-section">
+                <h4><i class="fas fa-check-circle"></i> Softbank Grading System</h4>
+                <p>• <strong>Grade S:</strong> Brand New / Unused<br>
+                   • <strong>Grade A:</strong> Mint Condition (No visible scratches)<br>
+                   • <strong>Grade B:</strong> Minor signs of use</p>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-image"></i>Stock Photo 1</div>
+                <div class="photo-box"><i class="fas fa-image"></i>Stock Photo 2</div>
+                <div class="photo-box"><i class="fas fa-image"></i>Stock Photo 3</div>
+            </div>
         </div>
-        <p>Premium quality stock from Japan's leading carriers. High reliability and accurate testing.</p>
-        <div class="grading-box">
-            <strong>Standard Grading:</strong> Grade S (New), Grade A (Like New), Grade B (Minor Scratches), Grade C (Used).
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>NTT Docomo & AU KDDI</h3>
+                <span class="badge badge-japan">Japan Market</span>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-image"></i>Docomo Inventory</div>
+                <div class="photo-box"><i class="fas fa-image"></i>AU KDDI Inventory</div>
+            </div>
         </div>
-        <div class="photo-grid">
-            <div class="photo-box">Sample Image</div>
-            <div class="photo-box">Sample Image</div>
-            <div class="photo-box">Sample Image</div>
+
+        <hr style="opacity: 0.1; margin: 60px 0;">
+
+        <h2 class="market-title"><i class="fas fa-flag-usa"></i> USA Auction Market</h2>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>HYLA Mobile</h3>
+                <span class="badge badge-usa">USA Market</span>
+            </div>
+            <p>Partnering with Hyla Mobile for massive wholesale trade-in lots. The gold standard for US inventory.</p>
+            <div class="grading-section">
+                <h4><i class="fas fa-clipboard-list"></i> HYLA Standard Grading</h4>
+                <p>• <strong>A+ Grade:</strong> Flawless functional & cosmetic<br>
+                   • <strong>A Grade:</strong> Minor Wear / 100% Functional<br>
+                   • <strong>B Grade:</strong> Visible Scratches / Fully Functional</p>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-images"></i>HYLA Stock A</div>
+                <div class="photo-box"><i class="fas fa-images"></i>HYLA Stock B</div>
+                <div class="photo-box"><i class="fas fa-images"></i>Packaging View</div>
+            </div>
         </div>
+
+        <div class="auction-card">
+            <div class="card-header">
+                <h3>AT&T / T-Mobile / Mannapov / EcoATM</h3>
+                <span class="badge badge-usa">USA Market</span>
+            </div>
+            <p>Direct wholesale bidding on carrier-returned and kiosk-collected stock. High volume availability.</p>
+            <div class="photo-grid">
+                <div class="photo-box"><i class="fas fa-box-open"></i>Carrier Bulk Lot</div>
+                <div class="photo-box"><i class="fas fa-box-open"></i>EcoATM Inventory</div>
+            </div>
+        </div>
+
     </div>
-
-    <h2 class="section-title">🇺🇸 USA Auction Sources</h2>
-
-    <div class="auction-card">
-        <div class="card-header">
-            <i class="fas fa-gavel"></i>
-            <h3>HYLA Mobile (USA)</h3>
-        </div>
-        <p>One of the largest trade-in collectors in the US. Massive inventory of iPhones and Samsung.</p>
-        <div class="grading-box">
-            <strong>HYLA Grading:</strong> Like New, A-Grade (Functional), B-Grade (Power Up), C-Grade (Cracked/Damage).
-        </div>
-        <div class="photo-grid">
-            <div class="photo-box">Hyla Stock 1</div>
-            <div class="photo-box">Hyla Stock 2</div>
-            <div class="photo-box">Hyla Stock 3</div>
-        </div>
-    </div>
-
-    <div class="auction-card">
-        <div class="card-header">
-            <i class="fas fa-network-wired"></i>
-            <h3>Carrier Auctions (AT&T, T-Mobile, Mannapov)</h3>
-        </div>
-        <p>Direct bidding for wholesale carrier stock. Bulk quantity available for global export.</p>
-        <div class="grading-box">
-            <strong>Grading Info:</strong> Fully tested carrier stock with clean ESN/IMEI verification.
-        </div>
-        <div class="photo-grid">
-            <div class="photo-box">Carrier Stock</div>
-            <div class="photo-box">Carrier Stock</div>
-        </div>
-    </div>
-
-    <div class="auction-card">
-        <div class="card-header">
-            <i class="fas fa-recycle"></i>
-            <h3>EcoATM Auctions</h3>
-        </div>
-        <p>Budget-friendly stock with high turnover. Best for wholesale distributors looking for volume.</p>
-        <div class="grading-box">
-            <strong>Grading:</strong> C-Grade and D-Grade mixed wholesale lots.
-        </div>
-        <div class="photo-grid">
-            <div class="photo-box">EcoATM Box 1</div>
-            <div class="photo-box">EcoATM Box 2</div>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
