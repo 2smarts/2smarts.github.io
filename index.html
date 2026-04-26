@@ -312,40 +312,36 @@
 <div id="wechatModal" class="wechat-modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeWeChat()">&times;</span>
-        <h3 style="color: #09b83e; margin-bottom: 10px;">Scan WeChat QR</h3>
+        <h3 style="color: #09b83e; margin-bottom: 10px;">Connect on WeChat</h3>
         
         <img src="wechat-qr.jpg" alt="WeChat QR">
         
         <p style="margin-top: 15px; font-weight: bold; color: #333; font-size: 1.1rem;">
             ID: asif555
         </p>
-        <p style="font-size: 0.85rem; color: #666;">Scan this code to connect with us on WeChat</p>
+        <p style="font-size: 0.85rem; color: #666; padding: 0 10px;">
+            Please <strong>Save QR</strong> or <strong>Copy ID</strong> and search in WeChat app to add us.
+        </p>
     </div>
 </div>
 
     <script>
     function openWeChat() {
-        // Modal ko hamesha dikhayein (Windows/Mobile dono par)
+        // Modal hamesha khulay ga (Backup ke liye)
         var modal = document.getElementById("wechatModal");
         if(modal) {
             modal.style.display = "flex";
         }
 
-        // Sirf Mobile par Deep Link try karein taake Windows par error na aye
+        // Mobile par app kholnay ki koshish karein
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            window.location.href = "weixin://dl/chat?asif555";
+            // Yeh sirf app open karega
+            window.location.href = "weixin://"; 
         }
     }
 
     function closeWeChat() {
         document.getElementById("wechatModal").style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        let modal = document.getElementById("wechatModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
     }
 </script>
 
