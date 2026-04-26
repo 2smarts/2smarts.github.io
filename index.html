@@ -195,13 +195,14 @@
 
        /* WeChat QR Modal Styling */
 .wechat-modal {
-    display: none; 
+    display: none; /* Default band rahega */
     position: fixed; 
-    z-index: 10001; 
+    z-index: 99999; /* Isse sab se zyada rakhein */
     left: 0; top: 0; 
     width: 100%; height: 100%; 
-    background-color: rgba(0,0,0,0.8); 
-    align-items: center; justify-content: center;
+    background-color: rgba(0,0,0,0.85); /* Background thora dark */
+    align-items: center; 
+    justify-content: center;
 }
 .modal-content {
     background: white; 
@@ -324,12 +325,22 @@
 
     <script>
     function openWeChat() {
-        document.getElementById("wechatModal").style.display = "flex";
+        // Modal ko hamesha dikhayein (Windows/Mobile dono par)
+        var modal = document.getElementById("wechatModal");
+        if(modal) {
+            modal.style.display = "flex";
+        }
+
+        // Sirf Mobile par Deep Link try karein taake Windows par error na aye
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = "weixin://dl/chat?asif555";
+        }
     }
+
     function closeWeChat() {
         document.getElementById("wechatModal").style.display = "none";
     }
-    // Agar modal se bahar click karein tab bhi band ho jaye
+
     window.onclick = function(event) {
         let modal = document.getElementById("wechatModal");
         if (event.target == modal) {
