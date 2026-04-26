@@ -3,289 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2SMARTS PVT LIMITED | Global Sourcing & Tech</title>
+    <title>2SMARTS PVT LIMITED | Global Sourcing</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* === COLOR VARIABLES === */
+        /* === 1. GLOBAL SETTINGS & COLORS === */
         :root {
-            --primary-color: #0a192f; /* Deep Navy Blue */
-            --accent-color: #c5a059;  /* Luxury Gold */
+            --primary: #0a192f;
+            --accent: #c5a059;
             --text-light: #ffffff;
-            --text-gray: #ccd6f6;
             --bg-light: #f4f7f6;
+            --card-bg: #ffffff;
         }
 
-        /* === GENERAL SETUP === */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg-light); color: var(--primary-color); line-height: 1.6; padding-bottom: 100px; }
+        body { background-color: var(--bg-light); color: var(--primary); line-height: 1.6; }
 
-        /* === 1. TOP SCROLLABLE MENU (Sticky) === */
-        .nav-menu {
-            position: sticky;
-            top: 0;
-            background: rgba(10, 25, 47, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 15px 10px;
-            z-index: 1000;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            border-bottom: 3px solid var(--accent-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .nav-menu::-webkit-scrollbar { display: none; } /* Hides scrollbar */
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 25px;
-            transition: 0.3s;
-            background: rgba(255,255,255,0.05);
-        }
-        .nav-link:hover, .nav-link.active {
-            background: var(--accent-color);
-            color: var(--primary-color);
-        }
-
-        /* === 2. HEADER SECTION (Brand & Address) === */
+        /* === 2. HEADER SECTION (Logo & Title) === */
         header {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: var(--text-light);
-            padding: 70px 20px 100px 20px;
+            padding: 50px 20px 30px;
             text-align: center;
             background-image: radial-gradient(circle at 50% -20%, #1a365d, #0a192f);
         }
         .company-name {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 900;
             letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: var(--accent-color);
+            color: var(--accent);
+            margin-bottom: 5px;
         }
-        .address-box {
-            font-size: 1rem;
-            color: var(--text-gray);
-            margin-top: 15px;
+        .tagline {
+            font-size: 1.1rem;
             font-weight: 300;
+            opacity: 0.8;
         }
 
-        /* === 3. MAIN CONTENT CONTAINER === */
+        /* === 3. VERTICAL NAVIGATION MENU === */
+        .nav-container {
+            background: var(--primary);
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 3px solid var(--accent);
+        }
+        .nav-menu {
+            display: flex;
+            flex-direction: column; /* This makes it Vertical */
+            width: 100%;
+            max-width: 300px; /* Menu ki width control karne ke liye */
+            gap: 10px;
+            padding: 0 20px;
+        }
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            transition: 0.3s;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .nav-link:hover, .nav-link.active {
+            background: var(--accent);
+            color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        /* === 4. MAIN CONTENT CONTAINER === */
         .container {
             max-width: 1100px;
-            margin: -60px auto 40px; /* Overlaps header for 3D look */
-            padding: 40px 30px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-box {
             background: white;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            padding: 30px;
             border-radius: 15px;
-            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
         }
 
         .section-title {
-            color: var(--primary-color);
-            border-left: 5px solid var(--accent-color);
-            padding-left: 15px;
-            margin: 40px 0 20px;
             font-size: 1.8rem;
             font-weight: 700;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
         }
 
-        /* === 4. ELITE TRADING HUB BUTTON === */
-        .portal-btn {
-            display: block;
-            background: var(--primary-color);
-            color: var(--accent-color);
-            text-align: center;
-            padding: 20px;
-            margin: 10px auto 40px;
-            border: 2px solid var(--accent-color);
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            width: 100%;
-            box-shadow: 0 10px 20px rgba(10, 25, 47, 0.2);
-        }
-        .portal-btn:hover {
-            background: var(--accent-color);
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        /* === 5. GRID LAYOUTS (Market Flow & Revenue) === */
+        /* === 5. GRID & CARDS === */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            gap: 20px;
         }
-
-        .market-flow {
-            background: var(--primary-color);
-            color: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            margin-top: 40px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-        }
-        .market-flow h3 { color: var(--accent-color); margin-bottom: 15px; font-size: 1.3rem;}
-        ul { list-style: none; margin-top: 10px; }
-        ul li { margin-bottom: 8px; font-size: 1.1rem; }
-        ul li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--accent-color); margin-right: 10px; }
-
         .card {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            border-top: 5px solid var(--accent-color);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 5px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-        .card h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.4rem;}
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 10px; color: var(--primary); }
 
-        /* === 6. FLOATING BUTTONS (WhatsApp & WeChat) === */
-        .whatsapp-fixed {
-            position: fixed;
-            bottom: 100px; /* Thoda upar taake WeChat se clash na kare */
-            right: 25px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .whatsapp-fixed:hover { transform: scale(1.1); }
-
-        .wechat-float-btn {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #07C160, #06ad56);
-            border-radius: 50%;
-            box-shadow: 0 10px 25px rgba(7, 193, 96, 0.4);
-            cursor: pointer;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        .wechat-float-btn:hover { transform: scale(1.1); }
-        .wechat-logo-svg { width: 35px; height: 35px; fill: white; }
-
-        /* === WECHAT POPUP STYLES === */
-        #wechat-popup {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 25, 47, 0.9);
-            z-index: 100000;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .qr-card-stylish {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
+        /* === 6. FOOTER (With New Address Location) === */
+        footer {
+            background: #e9ecef;
+            padding: 40px 20px;
             text-align: center;
-            width: 300px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            border: 3px solid var(--accent-color);
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
         }
-        .qr-image { width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 25px; }
-        .add-link-btn {
-            display: block;
-            background: var(--primary-color);
-            color: var(--accent-color);
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: 0.3s;
-            margin-bottom: 20px;
-            border: 1px solid var(--accent-color);
+        .footer-address {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
         }
-        .add-link-btn:hover { background: var(--accent-color); color: var(--primary-color); }
-        .close-txt { color: #999; cursor: pointer; font-size: 0.8rem; text-transform: uppercase; font-weight: bold;}
+        .footer-address i { color: var(--accent); margin-right: 8px; }
 
-        /* === FOOTER === */
-        footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #666; background: #e9ecef; margin-top: 50px;}
+        /* === 7. FLOATING BUTTONS === */
+        .whatsapp-fixed {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25d366; color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-decoration: none; z-index: 1000;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="nav-menu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="mobile-trading.html" class="nav-link">Mobile Trading</a>
-        <a href="buy-ship.html" class="nav-link">Buy & Ship</a>
-        <a href="app.html" class="nav-link">Free Business App</a>
-        <a href="it-solutions.html" class="nav-link">IT Solutions</a>
-    </nav>
-
     <header>
-        <div class="company-name">2SMARTS PVT LIMITED <span style="font-size:2rem;">🇭🇰</span></div>
-        <p style="font-size: 1.2rem; color: var(--accent-color); font-weight: 300;">Your Global Sourcing & Tech Partner</p>
-        <div class="address-box">
-            <i class="fas fa-map-marker-alt" style="color:var(--accent-color)"></i> 11/F Hang Wan Building, Granville Road, Hong Kong
-        </div>
+        <div class="company-name">2SMARTS PVT LIMITED 🇭🇰</div>
+        <p class="tagline">Your Global Sourcing & Tech Partner</p>
     </header>
+
+    <div class="nav-container">
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="mobile-trading.html" class="nav-link">Mobile Trading</a>
+            <a href="buy-ship.html" class="nav-link">Buy & Ship</a>
+            <a href="app.html" class="nav-link">Free Business App</a>
+            <a href="it-solutions.html" class="nav-link">IT Solutions</a>
+        </nav>
+    </div>
 
     <div class="container">
         
-        <a href="Portal.html" style="text-decoration: none;">
-            <button class="portal-btn">ENTER ELITE TRADING HUB</button>
-        </a>
-
-        <div>
+        <div class="section-box">
             <h2 class="section-title">Core Business Operations</h2>
-            <p style="font-size: 1.1rem;">Expert trading in <strong>New & Used Mobile Devices</strong> and high-demand <strong>Electronics Stock Lots</strong> across HK, USA, and Japan. We also provide modern digital solutions to streamline your business.</p>
+            <p>Expert trading in <strong>New & Used Mobile Devices</strong> and high-demand <strong>Electronics Stock Lots</strong> across HK, USA, and Japan. We also provide modern digital solutions to streamline your business.</p>
         </div>
 
-        <div class="market-flow">
-            <h2 style="color: var(--accent-color); font-size: 2rem; margin-bottom: 10px;">Global Market Flow</h2>
-            <div class="grid">
-                <div>
-                    <h3><i class="fas fa-plane-departure"></i> Sourcing From</h3>
-                    <ul>
-                        <li>Domestic Hong Kong</li>
-                        <li>East Asia Markets</li>
-                        <li>USA Distributions</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3><i class="fas fa-plane-arrival"></i> Key Destinations</h3>
-                    <ul>
-                        <li>Domestic Hong Kong</li>
-                        <li>Middle East (UAE)</li>
-                        <li>South Asia (Pakistan)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Our Services & Models</h2>
         <div class="grid">
             <div class="card">
                 <h3>📱 Direct Trading</h3>
@@ -296,36 +177,24 @@
                 <p>Your local agent in HK for supplier coordination, quality inspection, and direct pickups.</p>
             </div>
             <div class="card">
-                <h3>📦 Logistics Margin</h3>
+                <h3>📦 Logistics Support</h3>
                 <p>Volume-based freight consolidation and secure shipping from origin directly to your warehouse.</p>
             </div>
         </div>
+
     </div>
 
     <footer>
+        <div class="footer-address">
+            <i class="fas fa-map-marker-alt"></i> Hang Wan Building, Granville Road, Hong Kong
+        </div>
         <p>Email: 2smartspvtltd@gmail.com | Phone/WA: +852 6025 7569</p>
-        <p>&copy; 2026 2SMARTS PVT LIMITED. Registered in SAR Hong Kong.</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 2SMARTS PVT LIMITED. Registered in SAR Hong Kong.</p>
     </footer>
 
     <a href="https://wa.me/85260257569" class="whatsapp-fixed" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <div class="wechat-float-btn" onclick="document.getElementById('wechat-popup').style.display='flex'">
-        <svg class="wechat-logo-svg" viewBox="0 0 24 24">
-            <path d="M8.5 14a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm4 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zM17 11.25a.25.25 0 1 0 0-.5.25.25 0 0 0 0 .5zm-3 0a.25.25 0 1 0 0-.5.25.25 0 0 0 0 .5zM19.12 8.79C19.12 6.31 15.99 4.29 12.11 4.29C8.24 4.29 5.11 6.31 5.11 8.79C5.11 10.25 5.89 11.55 7.22 12.34l-.47 1.4c-.05.15.06.3.21.3h.05l1.64-.84c.47.12.96.19 1.46.19c1.05 0 2.05-.29 2.92-.81c.65.51 1.48.81 2.38.81c.42 0 .82-.06 1.19-.17l1.37.7c.05.03.11.05.17.05c.12 0 .23-.08.26-.19l.39-1.17c.56-.73 1.1-1.81 1.1-3.01zM9 6c3.31 0 6 2.01 6 4.5c0 .43-.08.85-.23 1.23c.47.17.97.27 1.48.27c2.21 0 4-1.57 4-3.5c0-1.93-1.79-3.5-4-3.5c-1.5 0-2.83.58-3.79 1.52c-.36-.63-.82-1.17-1.35-1.59c-.2-.15-.43-.29-.67-.4c-.3-.14-.62-.24-.95-.3c-.28-.05-.56-.08-.85-.08c-.28 0-.55.03-.81.07c-.33.06-.65.16-.95.3c-.24.11-.47.25-.67.4c-.84.66-1.39 1.63-1.39 2.73c0 .17.01.33.04.49C6.54 6.16 7.71 6 9 6z"/>
-        </svg>
-    </div>
-
-    <div id="wechat-popup">
-        <div class="qr-card-stylish">
-            <img src="qr.jpg" alt="WeChat QR" class="qr-image">
-            <a href="https://wechat.com/add/asif555" class="add-link-btn">Asif 555</a>
-            <div class="close-txt" onclick="document.getElementById('wechat-popup').style.display='none'">
-                [ Close Window ]
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>
